@@ -37,6 +37,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'coc_war_planner.core',
+    'coc_war_planner.api',
+    'coc_war_planner.www',
+    'django_extensions',
+    'rest_framework',
+    'annoying',
+    'dynamic_initial_data',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,8 +83,9 @@ WSGI_APPLICATION = 'coc_war_planner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'coc_war_planner',
+        'USER': 'root'
     }
 }
 
@@ -98,5 +106,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+import os.path
+import sys
 
-STATIC_URL = '/static/'
+PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public')
+STATIC_URL = '/public/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "public"),
+)
