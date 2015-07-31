@@ -42,8 +42,8 @@ INSTALLED_APPS = (
     'coc_war_planner.www',
     'django_extensions',
     'rest_framework',
-    'wagtail',
-    #'django-annoying',
+    'annoying',
+    'dynamic_initial_data',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,5 +106,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+import os.path
+import sys
 
-STATIC_URL = '/static/'
+PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public')
+STATIC_URL = '/public/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "public"),
+)
