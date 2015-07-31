@@ -37,6 +37,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'coc_war_planner.core',
+    'coc_war_planner.api',
+    'coc_war_planner.www',
+    'django_extensions',
+    'rest_framework',
+    'wagtail',
+    #'django-annoying',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,8 +83,9 @@ WSGI_APPLICATION = 'coc_war_planner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'coc_war_planner',
+        'USER': 'root'
     }
 }
 
