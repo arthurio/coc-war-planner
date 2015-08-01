@@ -27,13 +27,3 @@ COMPRESS_CSS_FILTERS = [
 ]
 COMPRESS_CSS_HASHING_METHOD = 'content'
 
-import sys
-LOGGING = {
-    'handlers': {
-        'console':{
-            'level':'INFO',
-            'class':'logging.StreamHandler',
-            'strm': sys.stdout
-        },
-    }
-}
