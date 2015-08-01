@@ -3,6 +3,7 @@ from coc_war_planner.config.settings import *
 import os
 
 DEBUG = False
+TEMPLATE_DEBUG = False
 
 DATABASES = {
     'default': {
