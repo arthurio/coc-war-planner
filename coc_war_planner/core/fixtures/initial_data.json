@@ -1,0 +1,3739 @@
+[
+{
+    "fields": {
+        "category": "t1",
+        "attack_type": "Melee (Ground Only)",
+        "name": "Barbarian",
+        "housing_space": 1,
+        "barack_level_required": "1",
+        "attack_speed": "1.00",
+        "range": "0.00",
+        "training_time": 20,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "16.00"
+    },
+    "model": "core.troop",
+    "pk": 1
+},
+{
+    "fields": {
+        "category": "t1",
+        "attack_type": "Ranged (Ground & Air)",
+        "name": "Archer",
+        "housing_space": 1,
+        "barack_level_required": "2",
+        "attack_speed": "1.00",
+        "range": "4.00",
+        "training_time": 25,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "24.00"
+    },
+    "model": "core.troop",
+    "pk": 2
+},
+{
+    "fields": {
+        "category": "t1",
+        "attack_type": "Melee (Ground Only)",
+        "name": "Goblin",
+        "housing_space": 1,
+        "barack_level_required": "4",
+        "attack_speed": "1.00",
+        "range": "0.00",
+        "training_time": 30,
+        "preferred_target": "Resources (Damage x2)",
+        "extra_data": null,
+        "movement_speed": "32.00"
+    },
+    "model": "core.troop",
+    "pk": 3
+},
+{
+    "fields": {
+        "category": "t2",
+        "attack_type": "Melee (Ground Only)",
+        "name": "Giant",
+        "housing_space": 5,
+        "barack_level_required": "3",
+        "attack_speed": "2.00",
+        "range": "1.00",
+        "training_time": 120,
+        "preferred_target": "Defenses",
+        "extra_data": null,
+        "movement_speed": "12.00"
+    },
+    "model": "core.troop",
+    "pk": 4
+},
+{
+    "fields": {
+        "category": "t2",
+        "attack_type": "Area Splash 2 Tile Radius (Ground Only)",
+        "name": "Wall Breaker",
+        "housing_space": 2,
+        "barack_level_required": "5",
+        "attack_speed": "15.00",
+        "range": "1.00",
+        "training_time": 120,
+        "preferred_target": "Walls (Damage x40)",
+        "extra_data": null,
+        "movement_speed": "24.00"
+    },
+    "model": "core.troop",
+    "pk": 5
+},
+{
+    "fields": {
+        "category": "t2",
+        "attack_type": "Area Splash 1.2 Tile Radius (Ground Only)",
+        "name": "Balloon",
+        "housing_space": 5,
+        "barack_level_required": "6",
+        "attack_speed": "4.00",
+        "range": "1.00",
+        "training_time": 480,
+        "preferred_target": "Defenses",
+        "extra_data": "{u'death_damage_radius': 1.2}",
+        "movement_speed": "10.00"
+    },
+    "model": "core.troop",
+    "pk": 6
+},
+{
+    "fields": {
+        "category": "t2",
+        "attack_type": "Area Splash 0.3 Tile Radius (Ground & Air)",
+        "name": "Wizard",
+        "housing_space": 4,
+        "barack_level_required": "7",
+        "attack_speed": "1.50",
+        "range": "3.00",
+        "training_time": 480,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "16.00"
+    },
+    "model": "core.troop",
+    "pk": 7
+},
+{
+    "fields": {
+        "category": "t3",
+        "attack_type": "Heal Splash 2 Tile Radius (Ground Only)",
+        "name": "Healer",
+        "housing_space": 14,
+        "barack_level_required": "8",
+        "attack_speed": null,
+        "range": "5.00",
+        "training_time": 900,
+        "preferred_target": "",
+        "extra_data": "{u'heal_speed': 0.7}",
+        "movement_speed": "16.00"
+    },
+    "model": "core.troop",
+    "pk": 8
+},
+{
+    "fields": {
+        "category": "t3",
+        "attack_type": "Area Splash 0.3 Tile Radius (Ground & Air)",
+        "name": "Dragon",
+        "housing_space": 20,
+        "barack_level_required": "9",
+        "attack_speed": "1.50",
+        "range": "3.00",
+        "training_time": 1800,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "16.00"
+    },
+    "model": "core.troop",
+    "pk": 9
+},
+{
+    "fields": {
+        "category": "t3",
+        "attack_type": "Melee (Ground Only)",
+        "name": "P.E.K.K.A",
+        "housing_space": 25,
+        "barack_level_required": "10",
+        "attack_speed": "2.50",
+        "range": "0.80",
+        "training_time": 2700,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "16.00"
+    },
+    "model": "core.troop",
+    "pk": 10
+},
+{
+    "fields": {
+        "category": "d",
+        "attack_type": "Ranged (Ground & Air)",
+        "name": "Minion",
+        "housing_space": 2,
+        "barack_level_required": "1",
+        "attack_speed": "1.00",
+        "range": "2.75",
+        "training_time": 45,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "32.00"
+    },
+    "model": "core.troop",
+    "pk": 11
+},
+{
+    "fields": {
+        "category": "d",
+        "attack_type": "Melee (Ground Only)",
+        "name": "Hog Rider",
+        "housing_space": 5,
+        "barack_level_required": "2",
+        "attack_speed": "1.00",
+        "range": "0.60",
+        "training_time": 120,
+        "preferred_target": "Defenses",
+        "extra_data": null,
+        "movement_speed": "24.00"
+    },
+    "model": "core.troop",
+    "pk": 12
+},
+{
+    "fields": {
+        "category": "d",
+        "attack_type": "Area Splash 1 Tile Radius (Ground Only)",
+        "name": "Valkyrie",
+        "housing_space": 8,
+        "barack_level_required": "3",
+        "attack_speed": "1.80",
+        "range": "0.50",
+        "training_time": 480,
+        "preferred_target": "",
+        "extra_data": null,
+        "movement_speed": "24.00"
+    },
+    "model": "core.troop",
+    "pk": 13
+},
+{
+    "fields": {
+        "category": "d",
+        "attack_type": "Melee (Ground Only)",
+        "name": "Golem",
+        "housing_space": 30,
+        "barack_level_required": "4",
+        "attack_speed": "2.40",
+        "range": "1.00",
+        "training_time": 2700,
+        "preferred_target": "Defenses",
+        "extra_data": "{u'death_damage_radius': 1.2}",
+        "movement_speed": "12.00"
+    },
+    "model": "core.troop",
+    "pk": 14
+},
+{
+    "fields": {
+        "category": "d",
+        "attack_type": "Area Splash 0.3 Tile Radius (Ground & Air)",
+        "name": "Witch",
+        "housing_space": 12,
+        "barack_level_required": "5",
+        "attack_speed": "0.70",
+        "range": "4.00",
+        "training_time": 1200,
+        "preferred_target": "",
+        "extra_data": "{u'summon_cooldown': 6}",
+        "movement_speed": "12.00"
+    },
+    "model": "core.troop",
+    "pk": 15
+},
+{
+    "fields": {
+        "category": "d",
+        "attack_type": "Melee (Ground & Air)",
+        "name": "Lava Hound",
+        "housing_space": 30,
+        "barack_level_required": "6",
+        "attack_speed": "2.00",
+        "range": "1.00",
+        "training_time": 2700,
+        "preferred_target": "Air Defense",
+        "extra_data": null,
+        "movement_speed": "20.00"
+    },
+    "model": "core.troop",
+    "pk": 16
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": null,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": null,
+        "research_time": null,
+        "extra_data": "{u'healing_per_pulse': 24.5, u'healing_per_second': 35}",
+        "training_cost": 5000,
+        "troop": 8,
+        "hitpoints": 500
+    },
+    "model": "core.trooplevel",
+    "pk": 1
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": null,
+        "level": 2,
+        "research_cost": 750000,
+        "damage_per_attack": null,
+        "research_time": 259200,
+        "extra_data": "{u'healing_per_pulse': 29.4, u'healing_per_second': 42}",
+        "training_cost": 6000,
+        "troop": 8,
+        "hitpoints": 600
+    },
+    "model": "core.trooplevel",
+    "pk": 2
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": null,
+        "level": 3,
+        "research_cost": 1500000,
+        "damage_per_attack": null,
+        "research_time": 432000,
+        "extra_data": "{u'healing_per_pulse': 38.5, u'healing_per_second': 55}",
+        "training_cost": 8000,
+        "troop": 8,
+        "hitpoints": 840
+    },
+    "model": "core.trooplevel",
+    "pk": 3
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": null,
+        "level": 4,
+        "research_cost": 3000000,
+        "damage_per_attack": null,
+        "research_time": 604800,
+        "extra_data": "{u'healing_per_pulse': 49.7, u'healing_per_second': 71}",
+        "training_cost": 10000,
+        "troop": 8,
+        "hitpoints": 1176
+    },
+    "model": "core.trooplevel",
+    "pk": 4
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 140,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "210.00",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 25000,
+        "troop": 9,
+        "hitpoints": 1900
+    },
+    "model": "core.trooplevel",
+    "pk": 5
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 160,
+        "level": 2,
+        "research_cost": 2000000,
+        "damage_per_attack": "240.00",
+        "research_time": 604800,
+        "extra_data": null,
+        "training_cost": 29000,
+        "troop": 9,
+        "hitpoints": 2100
+    },
+    "model": "core.trooplevel",
+    "pk": 6
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 180,
+        "level": 3,
+        "research_cost": 3000000,
+        "damage_per_attack": "270.00",
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 2300,
+        "troop": 9,
+        "hitpoints": 2300
+    },
+    "model": "core.trooplevel",
+    "pk": 7
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 200,
+        "level": 4,
+        "research_cost": 7000000,
+        "damage_per_attack": "300.00",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 37000,
+        "troop": 9,
+        "hitpoints": 2500
+    },
+    "model": "core.trooplevel",
+    "pk": 8
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 220,
+        "level": 5,
+        "research_cost": 8000000,
+        "damage_per_attack": "330.00",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 42000,
+        "troop": 9,
+        "hitpoints": 2700
+    },
+    "model": "core.trooplevel",
+    "pk": 9
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 240,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "600.00",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 28000,
+        "troop": 10,
+        "hitpoints": 2800
+    },
+    "model": "core.trooplevel",
+    "pk": 10
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 270,
+        "level": 2,
+        "research_cost": 3000000,
+        "damage_per_attack": "675.00",
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 32000,
+        "troop": 10,
+        "hitpoints": 3100
+    },
+    "model": "core.trooplevel",
+    "pk": 11
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 300,
+        "level": 3,
+        "research_cost": 6000000,
+        "damage_per_attack": "750.00",
+        "research_time": 1036800,
+        "extra_data": null,
+        "training_cost": 36000,
+        "troop": 10,
+        "hitpoints": 3500
+    },
+    "model": "core.trooplevel",
+    "pk": 12
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 340,
+        "level": 4,
+        "research_cost": 7000000,
+        "damage_per_attack": "850.00",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 40000,
+        "troop": 10,
+        "hitpoints": 4000
+    },
+    "model": "core.trooplevel",
+    "pk": 13
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 380,
+        "level": 5,
+        "research_cost": 8000000,
+        "damage_per_attack": "950.00",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 45000,
+        "troop": 10,
+        "hitpoints": 4500
+    },
+    "model": "core.trooplevel",
+    "pk": 14
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 11,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "22.00",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 250,
+        "troop": 4,
+        "hitpoints": 300
+    },
+    "model": "core.trooplevel",
+    "pk": 15
+},
+{
+    "fields": {
+        "laboratory_level_required": 2,
+        "damage_per_second": 14,
+        "level": 2,
+        "research_cost": 100000,
+        "damage_per_attack": "28.00",
+        "research_time": 86400,
+        "extra_data": null,
+        "training_cost": 750,
+        "troop": 4,
+        "hitpoints": 360
+    },
+    "model": "core.trooplevel",
+    "pk": 16
+},
+{
+    "fields": {
+        "laboratory_level_required": 4,
+        "damage_per_second": 19,
+        "level": 3,
+        "research_cost": 250000,
+        "damage_per_attack": "38.00",
+        "research_time": 172800,
+        "extra_data": null,
+        "training_cost": 1250,
+        "troop": 4,
+        "hitpoints": 420
+    },
+    "model": "core.trooplevel",
+    "pk": 17
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 24,
+        "level": 4,
+        "research_cost": 750000,
+        "damage_per_attack": "48.00",
+        "research_time": 259200,
+        "extra_data": null,
+        "training_cost": 1750,
+        "troop": 4,
+        "hitpoints": 520
+    },
+    "model": "core.trooplevel",
+    "pk": 18
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 31,
+        "level": 5,
+        "research_cost": 2250000,
+        "damage_per_attack": "62.00",
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 2250,
+        "troop": 4,
+        "hitpoints": 670
+    },
+    "model": "core.trooplevel",
+    "pk": 19
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 43,
+        "level": 6,
+        "research_cost": 6000000,
+        "damage_per_attack": "86.00",
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 3000,
+        "troop": 4,
+        "hitpoints": 940
+    },
+    "model": "core.trooplevel",
+    "pk": 20
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 50,
+        "level": 7,
+        "research_cost": 7000000,
+        "damage_per_attack": "100.00",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 3500,
+        "troop": 4,
+        "hitpoints": 1100
+    },
+    "model": "core.trooplevel",
+    "pk": 21
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 12,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "480.00",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 1000,
+        "troop": 5,
+        "hitpoints": 20
+    },
+    "model": "core.trooplevel",
+    "pk": 22
+},
+{
+    "fields": {
+        "laboratory_level_required": 2,
+        "damage_per_second": 16,
+        "level": 2,
+        "research_cost": 100000,
+        "damage_per_attack": "640.00",
+        "research_time": 86400,
+        "extra_data": null,
+        "training_cost": 1500,
+        "troop": 5,
+        "hitpoints": 24
+    },
+    "model": "core.trooplevel",
+    "pk": 23
+},
+{
+    "fields": {
+        "laboratory_level_required": 4,
+        "damage_per_second": 24,
+        "level": 3,
+        "research_cost": 250000,
+        "damage_per_attack": "960.00",
+        "research_time": 172800,
+        "extra_data": null,
+        "training_cost": 2000,
+        "troop": 5,
+        "hitpoints": 29
+    },
+    "model": "core.trooplevel",
+    "pk": 24
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 32,
+        "level": 4,
+        "research_cost": 750000,
+        "damage_per_attack": "1280.00",
+        "research_time": 259200,
+        "extra_data": null,
+        "training_cost": 2500,
+        "troop": 5,
+        "hitpoints": 35
+    },
+    "model": "core.trooplevel",
+    "pk": 25
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 46,
+        "level": 5,
+        "research_cost": 2250000,
+        "damage_per_attack": "1840.00",
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 3000,
+        "troop": 5,
+        "hitpoints": 42
+    },
+    "model": "core.trooplevel",
+    "pk": 26
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 60,
+        "level": 6,
+        "research_cost": 6750000,
+        "damage_per_attack": "2400.00",
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 3500,
+        "troop": 5,
+        "hitpoints": 54
+    },
+    "model": "core.trooplevel",
+    "pk": 27
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 25,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "100.00",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 2000,
+        "troop": 6,
+        "hitpoints": 150
+    },
+    "model": "core.trooplevel",
+    "pk": 28
+},
+{
+    "fields": {
+        "laboratory_level_required": 2,
+        "damage_per_second": 32,
+        "level": 2,
+        "research_cost": 150000,
+        "damage_per_attack": "128.00",
+        "research_time": 86400,
+        "extra_data": null,
+        "training_cost": 2500,
+        "troop": 6,
+        "hitpoints": 180
+    },
+    "model": "core.trooplevel",
+    "pk": 29
+},
+{
+    "fields": {
+        "laboratory_level_required": 4,
+        "damage_per_second": 48,
+        "level": 3,
+        "research_cost": 450000,
+        "damage_per_attack": "192.00",
+        "research_time": 172800,
+        "extra_data": null,
+        "training_cost": 3000,
+        "troop": 6,
+        "hitpoints": 216
+    },
+    "model": "core.trooplevel",
+    "pk": 30
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 72,
+        "level": 4,
+        "research_cost": 1350000,
+        "damage_per_attack": "288.00",
+        "research_time": 259200,
+        "extra_data": null,
+        "training_cost": 3500,
+        "troop": 6,
+        "hitpoints": 280
+    },
+    "model": "core.trooplevel",
+    "pk": 31
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 108,
+        "level": 5,
+        "research_cost": 2500000,
+        "damage_per_attack": "432.00",
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 4000,
+        "troop": 6,
+        "hitpoints": 390
+    },
+    "model": "core.trooplevel",
+    "pk": 32
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 162,
+        "level": 6,
+        "research_cost": 6000000,
+        "damage_per_attack": "648.00",
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 4500,
+        "troop": 6,
+        "hitpoints": 545
+    },
+    "model": "core.trooplevel",
+    "pk": 33
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 50,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "75.00",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 1500,
+        "troop": 7,
+        "hitpoints": 75
+    },
+    "model": "core.trooplevel",
+    "pk": 34
+},
+{
+    "fields": {
+        "laboratory_level_required": 3,
+        "damage_per_second": 70,
+        "level": 2,
+        "research_cost": 150000,
+        "damage_per_attack": "105.00",
+        "research_time": 86400,
+        "extra_data": null,
+        "training_cost": 2000,
+        "troop": 7,
+        "hitpoints": 90
+    },
+    "model": "core.trooplevel",
+    "pk": 35
+},
+{
+    "fields": {
+        "laboratory_level_required": 4,
+        "damage_per_second": 90,
+        "level": 3,
+        "research_cost": 450000,
+        "damage_per_attack": "135.00",
+        "research_time": 172800,
+        "extra_data": null,
+        "training_cost": 2500,
+        "troop": 7,
+        "hitpoints": 108
+    },
+    "model": "core.trooplevel",
+    "pk": 36
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 125,
+        "level": 4,
+        "research_cost": 1350000,
+        "damage_per_attack": "187.50",
+        "research_time": 259200,
+        "extra_data": null,
+        "training_cost": 3000,
+        "troop": 7,
+        "hitpoints": 130
+    },
+    "model": "core.trooplevel",
+    "pk": 37
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 170,
+        "level": 5,
+        "research_cost": 2500000,
+        "damage_per_attack": "255.00",
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 3500,
+        "troop": 7,
+        "hitpoints": 156
+    },
+    "model": "core.trooplevel",
+    "pk": 38
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 180,
+        "level": 6,
+        "research_cost": 7500000,
+        "damage_per_attack": "270.00",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 4000,
+        "troop": 7,
+        "hitpoints": 164
+    },
+    "model": "core.trooplevel",
+    "pk": 39
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 35,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": null,
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 6,
+        "troop": 11,
+        "hitpoints": 55
+    },
+    "model": "core.trooplevel",
+    "pk": 40
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 38,
+        "level": 2,
+        "research_cost": 10000,
+        "damage_per_attack": null,
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 7,
+        "troop": 11,
+        "hitpoints": 60
+    },
+    "model": "core.trooplevel",
+    "pk": 41
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 42,
+        "level": 3,
+        "research_cost": 20000,
+        "damage_per_attack": null,
+        "research_time": 518400,
+        "extra_data": null,
+        "training_cost": 8,
+        "troop": 11,
+        "hitpoints": 66
+    },
+    "model": "core.trooplevel",
+    "pk": 42
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 46,
+        "level": 4,
+        "research_cost": 30000,
+        "damage_per_attack": null,
+        "research_time": 604800,
+        "extra_data": null,
+        "training_cost": 9,
+        "troop": 11,
+        "hitpoints": 72
+    },
+    "model": "core.trooplevel",
+    "pk": 43
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 50,
+        "level": 5,
+        "research_cost": 40000,
+        "damage_per_attack": null,
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 10,
+        "troop": 11,
+        "hitpoints": 78
+    },
+    "model": "core.trooplevel",
+    "pk": 44
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 54,
+        "level": 6,
+        "research_cost": 100000,
+        "damage_per_attack": null,
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 11,
+        "troop": 11,
+        "hitpoints": 84
+    },
+    "model": "core.trooplevel",
+    "pk": 45
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 60,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": null,
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 40,
+        "troop": 12,
+        "hitpoints": 270
+    },
+    "model": "core.trooplevel",
+    "pk": 46
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 70,
+        "level": 2,
+        "research_cost": 20000,
+        "damage_per_attack": null,
+        "research_time": 691200,
+        "extra_data": null,
+        "training_cost": 45,
+        "troop": 12,
+        "hitpoints": 312
+    },
+    "model": "core.trooplevel",
+    "pk": 47
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 80,
+        "level": 3,
+        "research_cost": 30000,
+        "damage_per_attack": null,
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 52,
+        "troop": 12,
+        "hitpoints": 360
+    },
+    "model": "core.trooplevel",
+    "pk": 48
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 92,
+        "level": 4,
+        "research_cost": 40000,
+        "damage_per_attack": null,
+        "research_time": 1036800,
+        "extra_data": null,
+        "training_cost": 58,
+        "troop": 12,
+        "hitpoints": 415
+    },
+    "model": "core.trooplevel",
+    "pk": 49
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 105,
+        "level": 5,
+        "research_cost": 50000,
+        "damage_per_attack": null,
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 65,
+        "troop": 12,
+        "hitpoints": 475
+    },
+    "model": "core.trooplevel",
+    "pk": 50
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 88,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "158.40",
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 70,
+        "troop": 13,
+        "hitpoints": 900
+    },
+    "model": "core.trooplevel",
+    "pk": 51
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 99,
+        "level": 2,
+        "research_cost": 50000,
+        "damage_per_attack": "178.20",
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 100,
+        "troop": 13,
+        "hitpoints": 1000
+    },
+    "model": "core.trooplevel",
+    "pk": 52
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 111,
+        "level": 3,
+        "research_cost": 60000,
+        "damage_per_attack": "199.80",
+        "research_time": 1036800,
+        "extra_data": null,
+        "training_cost": 130,
+        "troop": 13,
+        "hitpoints": 1100
+    },
+    "model": "core.trooplevel",
+    "pk": 53
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 124,
+        "level": 4,
+        "research_cost": 70000,
+        "damage_per_attack": "223.20",
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 160,
+        "troop": 13,
+        "hitpoints": 1200
+    },
+    "model": "core.trooplevel",
+    "pk": 54
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 38,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "91.20",
+        "research_time": null,
+        "extra_data": "{u'damage_upon_death': 350}",
+        "training_cost": 450,
+        "troop": 14,
+        "hitpoints": 4500
+    },
+    "model": "core.trooplevel",
+    "pk": 55
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 42,
+        "level": 2,
+        "research_cost": 60000,
+        "damage_per_attack": "100.80",
+        "research_time": 864000,
+        "extra_data": "{u'damage_upon_death': 400}",
+        "training_cost": 525,
+        "troop": 14,
+        "hitpoints": 5000
+    },
+    "model": "core.trooplevel",
+    "pk": 56
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 46,
+        "level": 3,
+        "research_cost": 70000,
+        "damage_per_attack": "110.40",
+        "research_time": 1036800,
+        "extra_data": "{u'damage_upon_death': 450}",
+        "training_cost": 600,
+        "troop": 14,
+        "hitpoints": 5500
+    },
+    "model": "core.trooplevel",
+    "pk": 57
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 50,
+        "level": 4,
+        "research_cost": 80000,
+        "damage_per_attack": "120.00",
+        "research_time": 1209600,
+        "extra_data": "{u'damage_upon_death': 500}",
+        "training_cost": 675,
+        "troop": 14,
+        "hitpoints": 6000
+    },
+    "model": "core.trooplevel",
+    "pk": 58
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 54,
+        "level": 5,
+        "research_cost": 90000,
+        "damage_per_attack": "129.60",
+        "research_time": 1209600,
+        "extra_data": "{u'damage_upon_death': 550}",
+        "training_cost": 750,
+        "troop": 14,
+        "hitpoints": 6300
+    },
+    "model": "core.trooplevel",
+    "pk": 59
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 25,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "17.50",
+        "research_time": null,
+        "extra_data": "{u'skeletons_summoned': u'3 (Limit 6)'}",
+        "training_cost": 250,
+        "troop": 15,
+        "hitpoints": 75
+    },
+    "model": "core.trooplevel",
+    "pk": 60
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 30,
+        "level": 2,
+        "research_cost": 75000,
+        "damage_per_attack": "21.00",
+        "research_time": 864000,
+        "extra_data": "{u'skeletons_summoned': u'4 (Limit 8)'}",
+        "training_cost": 350,
+        "troop": 15,
+        "hitpoints": 100
+    },
+    "model": "core.trooplevel",
+    "pk": 61
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 10,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": "20.00",
+        "research_time": null,
+        "extra_data": "{u'lava_pups_spawned': 8}",
+        "training_cost": 390,
+        "troop": 16,
+        "hitpoints": 5700
+    },
+    "model": "core.trooplevel",
+    "pk": 62
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 10,
+        "level": 2,
+        "research_cost": 60000,
+        "damage_per_attack": "24.00",
+        "research_time": 864000,
+        "extra_data": "{u'lava_pups_spawned': 10}",
+        "training_cost": 450,
+        "troop": 16,
+        "hitpoints": 6200
+    },
+    "model": "core.trooplevel",
+    "pk": 63
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 14,
+        "level": 3,
+        "research_cost": 70000,
+        "damage_per_attack": "28.00",
+        "research_time": 1036800,
+        "extra_data": "{u'lava_pups_spawned': 12}",
+        "training_cost": 510,
+        "troop": 16,
+        "hitpoints": 6700
+    },
+    "model": "core.trooplevel",
+    "pk": 64
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 8,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": null,
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 25,
+        "troop": 1,
+        "hitpoints": 45
+    },
+    "model": "core.trooplevel",
+    "pk": 65
+},
+{
+    "fields": {
+        "laboratory_level_required": 1,
+        "damage_per_second": 11,
+        "level": 2,
+        "research_cost": 50000,
+        "damage_per_attack": null,
+        "research_time": 21600,
+        "extra_data": null,
+        "training_cost": 40,
+        "troop": 1,
+        "hitpoints": 54
+    },
+    "model": "core.trooplevel",
+    "pk": 66
+},
+{
+    "fields": {
+        "laboratory_level_required": 3,
+        "damage_per_second": 14,
+        "level": 3,
+        "research_cost": 150000,
+        "damage_per_attack": null,
+        "research_time": 86400,
+        "extra_data": null,
+        "training_cost": 60,
+        "troop": 1,
+        "hitpoints": 65
+    },
+    "model": "core.trooplevel",
+    "pk": 67
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 18,
+        "level": 4,
+        "research_cost": 500000,
+        "damage_per_attack": null,
+        "research_time": 259200,
+        "extra_data": null,
+        "training_cost": 100,
+        "troop": 1,
+        "hitpoints": 78
+    },
+    "model": "core.trooplevel",
+    "pk": 68
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 23,
+        "level": 5,
+        "research_cost": 1500000,
+        "damage_per_attack": null,
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 150,
+        "troop": 1,
+        "hitpoints": 95
+    },
+    "model": "core.trooplevel",
+    "pk": 69
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 26,
+        "level": 6,
+        "research_cost": 4500000,
+        "damage_per_attack": null,
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 200,
+        "troop": 1,
+        "hitpoints": 110
+    },
+    "model": "core.trooplevel",
+    "pk": 70
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 30,
+        "level": 7,
+        "research_cost": 6000000,
+        "damage_per_attack": null,
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 250,
+        "troop": 1,
+        "hitpoints": 125
+    },
+    "model": "core.trooplevel",
+    "pk": 71
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 7,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": null,
+        "research_time": null,
+        "extra_data": null,
+        "training_cost": 50,
+        "troop": 2,
+        "hitpoints": 20
+    },
+    "model": "core.trooplevel",
+    "pk": 72
+},
+{
+    "fields": {
+        "laboratory_level_required": 1,
+        "damage_per_second": 9,
+        "level": 2,
+        "research_cost": 50000,
+        "damage_per_attack": null,
+        "research_time": 43200,
+        "extra_data": null,
+        "training_cost": 80,
+        "troop": 2,
+        "hitpoints": 23
+    },
+    "model": "core.trooplevel",
+    "pk": 73
+},
+{
+    "fields": {
+        "laboratory_level_required": 3,
+        "damage_per_second": 12,
+        "level": 3,
+        "research_cost": 250000,
+        "damage_per_attack": null,
+        "research_time": 172800,
+        "extra_data": null,
+        "training_cost": 120,
+        "troop": 2,
+        "hitpoints": 28
+    },
+    "model": "core.trooplevel",
+    "pk": 74
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 16,
+        "level": 4,
+        "research_cost": 750000,
+        "damage_per_attack": null,
+        "research_time": 259200,
+        "extra_data": null,
+        "training_cost": 200,
+        "troop": 2,
+        "hitpoints": 33
+    },
+    "model": "core.trooplevel",
+    "pk": 75
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 20,
+        "level": 5,
+        "research_cost": 2250000,
+        "damage_per_attack": null,
+        "research_time": 432000,
+        "extra_data": null,
+        "training_cost": 300,
+        "troop": 2,
+        "hitpoints": 40
+    },
+    "model": "core.trooplevel",
+    "pk": 76
+},
+{
+    "fields": {
+        "laboratory_level_required": 7,
+        "damage_per_second": 22,
+        "level": 6,
+        "research_cost": 6000000,
+        "damage_per_attack": null,
+        "research_time": 864000,
+        "extra_data": null,
+        "training_cost": 400,
+        "troop": 2,
+        "hitpoints": 44
+    },
+    "model": "core.trooplevel",
+    "pk": 77
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 25,
+        "level": 7,
+        "research_cost": 7500000,
+        "damage_per_attack": null,
+        "research_time": 1209600,
+        "extra_data": null,
+        "training_cost": 500,
+        "troop": 2,
+        "hitpoints": 48
+    },
+    "model": "core.trooplevel",
+    "pk": 78
+},
+{
+    "fields": {
+        "laboratory_level_required": null,
+        "damage_per_second": 11,
+        "level": 1,
+        "research_cost": null,
+        "damage_per_attack": null,
+        "research_time": null,
+        "extra_data": "{u'damage_per_second_on_resource_buildings': 22}",
+        "training_cost": 25,
+        "troop": 3,
+        "hitpoints": 25
+    },
+    "model": "core.trooplevel",
+    "pk": 79
+},
+{
+    "fields": {
+        "laboratory_level_required": 1,
+        "damage_per_second": 14,
+        "level": 2,
+        "research_cost": 50000,
+        "damage_per_attack": null,
+        "research_time": 43200,
+        "extra_data": "{u'damage_per_second_on_resource_buildings': 28}",
+        "training_cost": 40,
+        "troop": 3,
+        "hitpoints": 30
+    },
+    "model": "core.trooplevel",
+    "pk": 80
+},
+{
+    "fields": {
+        "laboratory_level_required": 3,
+        "damage_per_second": 19,
+        "level": 3,
+        "research_cost": 250000,
+        "damage_per_attack": null,
+        "research_time": 172800,
+        "extra_data": "{u'damage_per_second_on_resource_buildings': 38}",
+        "training_cost": 60,
+        "troop": 3,
+        "hitpoints": 36
+    },
+    "model": "core.trooplevel",
+    "pk": 81
+},
+{
+    "fields": {
+        "laboratory_level_required": 5,
+        "damage_per_second": 24,
+        "level": 4,
+        "research_cost": 750000,
+        "damage_per_attack": null,
+        "research_time": 259200,
+        "extra_data": "{u'damage_per_second_on_resource_buildings': 48}",
+        "training_cost": 80,
+        "troop": 3,
+        "hitpoints": 43
+    },
+    "model": "core.trooplevel",
+    "pk": 82
+},
+{
+    "fields": {
+        "laboratory_level_required": 6,
+        "damage_per_second": 32,
+        "level": 5,
+        "research_cost": 2250000,
+        "damage_per_attack": null,
+        "research_time": 432000,
+        "extra_data": "{u'damage_per_second_on_resource_buildings': 64}",
+        "training_cost": 100,
+        "troop": 3,
+        "hitpoints": 52
+    },
+    "model": "core.trooplevel",
+    "pk": 83
+},
+{
+    "fields": {
+        "laboratory_level_required": 8,
+        "damage_per_second": 42,
+        "level": 6,
+        "research_cost": 4500000,
+        "damage_per_attack": null,
+        "research_time": 864000,
+        "extra_data": "{u'damage_per_second_on_resource_buildings': 84}",
+        "training_cost": 150,
+        "troop": 3,
+        "hitpoints": 68
+    },
+    "model": "core.trooplevel",
+    "pk": 84
+},
+{
+    "fields": {
+        "category": "r",
+        "name": "Lightning Spell",
+        "housing_space": 2,
+        "time_to_brew": 1200,
+        "number_of_pulses": 6,
+        "radius": "2.00",
+        "time_between_pulses": "0.40",
+        "spell_factory_level_required": null,
+        "extra_data": "{u'random_radius': 3.5}",
+        "target": ""
+    },
+    "model": "core.spell",
+    "pk": 1
+},
+{
+    "fields": {
+        "category": "r",
+        "name": "Healing Spell",
+        "housing_space": 2,
+        "time_to_brew": 1200,
+        "number_of_pulses": 40,
+        "radius": "5.00",
+        "time_between_pulses": "0.30",
+        "spell_factory_level_required": 2,
+        "extra_data": null,
+        "target": ""
+    },
+    "model": "core.spell",
+    "pk": 2
+},
+{
+    "fields": {
+        "category": "r",
+        "name": "Rage Spell",
+        "housing_space": 2,
+        "time_to_brew": 1800,
+        "number_of_pulses": 60,
+        "radius": "5.00",
+        "time_between_pulses": "0.30",
+        "spell_factory_level_required": 3,
+        "extra_data": "{u'boost_time': 1}",
+        "target": ""
+    },
+    "model": "core.spell",
+    "pk": 3
+},
+{
+    "fields": {
+        "category": "r",
+        "name": "Jump Spell",
+        "housing_space": 2,
+        "time_to_brew": 1800,
+        "number_of_pulses": null,
+        "radius": "3.50",
+        "time_between_pulses": null,
+        "spell_factory_level_required": 4,
+        "extra_data": "{u'boost_time': 1}",
+        "target": ""
+    },
+    "model": "core.spell",
+    "pk": 4
+},
+{
+    "fields": {
+        "category": "r",
+        "name": "Freeze Spell",
+        "housing_space": 2,
+        "time_to_brew": 1800,
+        "number_of_pulses": null,
+        "radius": "3.50",
+        "time_between_pulses": null,
+        "spell_factory_level_required": 5,
+        "extra_data": null,
+        "target": ""
+    },
+    "model": "core.spell",
+    "pk": 5
+},
+{
+    "fields": {
+        "category": "d",
+        "name": "Poison Spell",
+        "housing_space": 1,
+        "time_to_brew": 900,
+        "number_of_pulses": 45,
+        "radius": "4.00",
+        "time_between_pulses": "0.33",
+        "spell_factory_level_required": 1,
+        "extra_data": null,
+        "target": "Ground & Air"
+    },
+    "model": "core.spell",
+    "pk": 6
+},
+{
+    "fields": {
+        "category": "d",
+        "name": "Earthquake Spell",
+        "housing_space": 1,
+        "time_to_brew": 900,
+        "number_of_pulses": null,
+        "radius": "4.50",
+        "time_between_pulses": null,
+        "spell_factory_level_required": 2,
+        "extra_data": "{u'favourite_target': u'Walls (Effect X4)'}",
+        "target": "Buildings & Walls"
+    },
+    "model": "core.spell",
+    "pk": 7
+},
+{
+    "fields": {
+        "category": "d",
+        "name": "Haste Spell",
+        "housing_space": 1,
+        "time_to_brew": 900,
+        "number_of_pulses": null,
+        "radius": "4.00",
+        "time_between_pulses": null,
+        "spell_factory_level_required": 3,
+        "extra_data": null,
+        "target": "Ground & Air"
+    },
+    "model": "core.spell",
+    "pk": 8
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 8,
+        "research_time": null,
+        "cost": 80,
+        "extra_data": "{u'speed_increase': 28, u'spell_duration': 10}"
+    },
+    "model": "core.spelllevel",
+    "pk": 1
+},
+{
+    "fields": {
+        "laboratory_level_required": "7",
+        "level": 2,
+        "research_cost": 40000,
+        "spell": 8,
+        "research_time": 691200,
+        "cost": 85,
+        "extra_data": "{u'speed_increase': 34, u'spell_duration': 15}"
+    },
+    "model": "core.spelllevel",
+    "pk": 2
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 3,
+        "research_cost": 80000,
+        "spell": 8,
+        "research_time": 864000,
+        "cost": 90,
+        "extra_data": "{u'speed_increase': 40, u'spell_duration': 20}"
+    },
+    "model": "core.spelllevel",
+    "pk": 3
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 4,
+        "research_cost": 100000,
+        "spell": 8,
+        "research_time": 1209600,
+        "cost": 95,
+        "extra_data": "{u'speed_increase': 46, u'spell_duration': 25}"
+    },
+    "model": "core.spelllevel",
+    "pk": 4
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 7,
+        "research_time": null,
+        "cost": 125,
+        "extra_data": "{u'hitpoints_lost': 6}"
+    },
+    "model": "core.spelllevel",
+    "pk": 5
+},
+{
+    "fields": {
+        "laboratory_level_required": "6",
+        "level": 2,
+        "research_cost": 30000,
+        "spell": 7,
+        "research_time": 518400,
+        "cost": 140,
+        "extra_data": "{u'hitpoints_lost': 8}"
+    },
+    "model": "core.spelllevel",
+    "pk": 6
+},
+{
+    "fields": {
+        "laboratory_level_required": "7",
+        "level": 3,
+        "research_cost": 60000,
+        "spell": 7,
+        "research_time": 691200,
+        "cost": 160,
+        "extra_data": "{u'hitpoints_lost': 10}"
+    },
+    "model": "core.spelllevel",
+    "pk": 7
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 4,
+        "research_cost": 90000,
+        "spell": 7,
+        "research_time": 1036800,
+        "cost": 180,
+        "extra_data": "{u'hitpoints_lost': 12}"
+    },
+    "model": "core.spelllevel",
+    "pk": 8
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 6,
+        "research_time": null,
+        "cost": 95,
+        "extra_data": "{u'damage_per_pulse': 6, u'total_damage': 270, u'speed_decrease': 28}"
+    },
+    "model": "core.spelllevel",
+    "pk": 9
+},
+{
+    "fields": {
+        "laboratory_level_required": "6",
+        "level": 2,
+        "research_cost": 25000,
+        "spell": 6,
+        "research_time": 345600,
+        "cost": 110,
+        "extra_data": "{u'damage_per_pulse': 8, u'total_damage': 360, u'speed_decrease': 30}"
+    },
+    "model": "core.spelllevel",
+    "pk": 10
+},
+{
+    "fields": {
+        "laboratory_level_required": "7",
+        "level": 3,
+        "research_cost": 50000,
+        "spell": 6,
+        "research_time": 518400,
+        "cost": 125,
+        "extra_data": "{u'damage_per_pulse': 10, u'total_damage': 450, u'speed_decrease': 32}"
+    },
+    "model": "core.spelllevel",
+    "pk": 11
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 4,
+        "research_cost": 75000,
+        "spell": 6,
+        "research_time": 864000,
+        "cost": 140,
+        "extra_data": "{u'damage_per_pulse': 12, u'total_damage': 540, u'speed_decrease': 34}"
+    },
+    "model": "core.spelllevel",
+    "pk": 12
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 5,
+        "research_time": null,
+        "cost": 26000,
+        "extra_data": "{u'freeze_time': 4}"
+    },
+    "model": "core.spelllevel",
+    "pk": 13
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 2,
+        "research_cost": 4000000,
+        "spell": 5,
+        "research_time": 432000,
+        "cost": 29000,
+        "extra_data": "{u'freeze_time': 5}"
+    },
+    "model": "core.spelllevel",
+    "pk": 14
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 3,
+        "research_cost": 5000000,
+        "spell": 5,
+        "research_time": 604800,
+        "cost": 31000,
+        "extra_data": "{u'freeze_time': 6}"
+    },
+    "model": "core.spelllevel",
+    "pk": 15
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 4,
+        "research_cost": 6500000,
+        "spell": 5,
+        "research_time": 864000,
+        "cost": 33000,
+        "extra_data": "{u'freeze_time': 7}"
+    },
+    "model": "core.spelllevel",
+    "pk": 16
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 5,
+        "research_cost": 8000000,
+        "spell": 5,
+        "research_time": 1209600,
+        "cost": 35000,
+        "extra_data": "{u'freeze_time': 8}"
+    },
+    "model": "core.spelllevel",
+    "pk": 17
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 4,
+        "research_time": null,
+        "cost": 23000,
+        "extra_data": "{u'spell_duration': 20}"
+    },
+    "model": "core.spelllevel",
+    "pk": 18
+},
+{
+    "fields": {
+        "laboratory_level_required": "6",
+        "level": 2,
+        "research_cost": 3000000,
+        "spell": 4,
+        "research_time": 432000,
+        "cost": 27000,
+        "extra_data": "{u'spell_duration': 40}"
+    },
+    "model": "core.spelllevel",
+    "pk": 19
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 3,
+        "research_cost": 6000000,
+        "spell": 4,
+        "research_time": 604800,
+        "cost": 31000,
+        "extra_data": "{u'spell_duration': 60}"
+    },
+    "model": "core.spelllevel",
+    "pk": 20
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 3,
+        "research_time": null,
+        "cost": 23000,
+        "extra_data": "{u'damage_increase': 130, u'speed_increase': 20}"
+    },
+    "model": "core.spelllevel",
+    "pk": 21
+},
+{
+    "fields": {
+        "laboratory_level_required": "3",
+        "level": 2,
+        "research_cost": 450000,
+        "spell": 3,
+        "research_time": 172800,
+        "cost": 25000,
+        "extra_data": "{u'damage_increase': 140, u'speed_increase': 22}"
+    },
+    "model": "core.spelllevel",
+    "pk": 22
+},
+{
+    "fields": {
+        "laboratory_level_required": "4",
+        "level": 3,
+        "research_cost": 900000,
+        "spell": 3,
+        "research_time": 259200,
+        "cost": 27000,
+        "extra_data": "{u'damage_increase': 150, u'speed_increase': 24}"
+    },
+    "model": "core.spelllevel",
+    "pk": 23
+},
+{
+    "fields": {
+        "laboratory_level_required": "5",
+        "level": 4,
+        "research_cost": 1800000,
+        "spell": 3,
+        "research_time": 432000,
+        "cost": 30000,
+        "extra_data": "{u'damage_increase': 160, u'speed_increase': 26}"
+    },
+    "model": "core.spelllevel",
+    "pk": 24
+},
+{
+    "fields": {
+        "laboratory_level_required": "6",
+        "level": 5,
+        "research_cost": 3000000,
+        "spell": 3,
+        "research_time": 604800,
+        "cost": 33000,
+        "extra_data": "{u'damage_increase': 170, u'speed_increase': 28}"
+    },
+    "model": "core.spelllevel",
+    "pk": 25
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 2,
+        "research_time": null,
+        "cost": 15000,
+        "extra_data": "{u'healing_per_pulse': 15, u'total_healing': 600}"
+    },
+    "model": "core.spelllevel",
+    "pk": 26
+},
+{
+    "fields": {
+        "laboratory_level_required": "2",
+        "level": 2,
+        "research_cost": 300000,
+        "spell": 2,
+        "research_time": 86400,
+        "cost": 16500,
+        "extra_data": "{u'healing_per_pulse': 20, u'total_healing': 800}"
+    },
+    "model": "core.spelllevel",
+    "pk": 27
+},
+{
+    "fields": {
+        "laboratory_level_required": "4",
+        "level": 3,
+        "research_cost": 600000,
+        "spell": 2,
+        "research_time": 172800,
+        "cost": 18000,
+        "extra_data": "{u'healing_per_pulse': 25, u'total_healing': 1000}"
+    },
+    "model": "core.spelllevel",
+    "pk": 28
+},
+{
+    "fields": {
+        "laboratory_level_required": "5",
+        "level": 4,
+        "research_cost": 1200000,
+        "spell": 2,
+        "research_time": 259200,
+        "cost": 20000,
+        "extra_data": "{u'healing_per_pulse': 30, u'total_healing': 1200}"
+    },
+    "model": "core.spelllevel",
+    "pk": 29
+},
+{
+    "fields": {
+        "laboratory_level_required": "6",
+        "level": 5,
+        "research_cost": 1200000,
+        "spell": 2,
+        "research_time": 432000,
+        "cost": 22000,
+        "extra_data": "{u'healing_per_pulse': 35, u'total_healing': 1400}"
+    },
+    "model": "core.spelllevel",
+    "pk": 30
+},
+{
+    "fields": {
+        "laboratory_level_required": "7",
+        "level": 6,
+        "research_cost": 4800000,
+        "spell": 2,
+        "research_time": 604800,
+        "cost": 24000,
+        "extra_data": "{u'healing_per_pulse': 40, u'total_healing': 1600}"
+    },
+    "model": "core.spelllevel",
+    "pk": 31
+},
+{
+    "fields": {
+        "laboratory_level_required": "",
+        "level": 1,
+        "research_cost": null,
+        "spell": 1,
+        "research_time": null,
+        "cost": 15000,
+        "extra_data": "{u'damage_per_strike': 50, u'total_damage': 300}"
+    },
+    "model": "core.spelllevel",
+    "pk": 32
+},
+{
+    "fields": {
+        "laboratory_level_required": "1",
+        "level": 2,
+        "research_cost": 200000,
+        "spell": 1,
+        "research_time": 86400,
+        "cost": 16500,
+        "extra_data": "{u'damage_per_strike': 55, u'total_damage': 330}"
+    },
+    "model": "core.spelllevel",
+    "pk": 33
+},
+{
+    "fields": {
+        "laboratory_level_required": "2",
+        "level": 3,
+        "research_cost": 500000,
+        "spell": 1,
+        "research_time": 172800,
+        "cost": 18000,
+        "extra_data": "{u'damage_per_strike': 60, u'total_damage': 360}"
+    },
+    "model": "core.spelllevel",
+    "pk": 34
+},
+{
+    "fields": {
+        "laboratory_level_required": "3",
+        "level": 4,
+        "research_cost": 1000000,
+        "spell": 1,
+        "research_time": 259200,
+        "cost": 20000,
+        "extra_data": "{u'damage_per_strike': 65, u'total_damage': 390}"
+    },
+    "model": "core.spelllevel",
+    "pk": 35
+},
+{
+    "fields": {
+        "laboratory_level_required": "6",
+        "level": 5,
+        "research_cost": 2000000,
+        "spell": 1,
+        "research_time": 345600,
+        "cost": 22000,
+        "extra_data": "{u'damage_per_strike': 70, u'total_damage': 420}"
+    },
+    "model": "core.spelllevel",
+    "pk": 36
+},
+{
+    "fields": {
+        "laboratory_level_required": "8",
+        "level": 6,
+        "research_cost": 8000000,
+        "spell": 1,
+        "research_time": 1209600,
+        "cost": 24000,
+        "extra_data": "{u'damage_per_strike': 70, u'total_damage': 420}"
+    },
+    "model": "core.spelllevel",
+    "pk": 37
+},
+{
+    "fields": {
+        "attack_type": "Ranged (Ground & Air)",
+        "attack_speed": "0.75",
+        "name": "Archer Queen",
+        "search_radius": 10,
+        "range": 5,
+        "movement_speed": "24.00"
+    },
+    "model": "core.hero",
+    "pk": 1
+},
+{
+    "fields": {
+        "attack_type": "Melee (Ground Only)",
+        "attack_speed": "1.20",
+        "name": "Barbarian King",
+        "search_radius": 9,
+        "range": 1,
+        "movement_speed": "16.00"
+    },
+    "model": "core.hero",
+    "pk": 2
+},
+{
+    "fields": {
+        "damage_increase": 56,
+        "hero": 2,
+        "level": 1,
+        "health_recovery": 500,
+        "summoned_unites": 6,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 18}"
+    },
+    "model": "core.heroability",
+    "pk": 1
+},
+{
+    "fields": {
+        "damage_increase": 101,
+        "hero": 2,
+        "level": 2,
+        "health_recovery": 620,
+        "summoned_unites": 8,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 19}"
+    },
+    "model": "core.heroability",
+    "pk": 2
+},
+{
+    "fields": {
+        "damage_increase": 147,
+        "hero": 2,
+        "level": 3,
+        "health_recovery": 752,
+        "summoned_unites": 10,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 20}"
+    },
+    "model": "core.heroability",
+    "pk": 3
+},
+{
+    "fields": {
+        "damage_increase": 195,
+        "hero": 2,
+        "level": 4,
+        "health_recovery": 899,
+        "summoned_unites": 12,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 21}"
+    },
+    "model": "core.heroability",
+    "pk": 4
+},
+{
+    "fields": {
+        "damage_increase": 245,
+        "hero": 2,
+        "level": 5,
+        "health_recovery": 1063,
+        "summoned_unites": 14,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 22}"
+    },
+    "model": "core.heroability",
+    "pk": 5
+},
+{
+    "fields": {
+        "damage_increase": 298,
+        "hero": 2,
+        "level": 6,
+        "health_recovery": 1247,
+        "summoned_unites": 16,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 23}"
+    },
+    "model": "core.heroability",
+    "pk": 6
+},
+{
+    "fields": {
+        "damage_increase": 354,
+        "hero": 2,
+        "level": 7,
+        "health_recovery": 1455,
+        "summoned_unites": 18,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 24}"
+    },
+    "model": "core.heroability",
+    "pk": 7
+},
+{
+    "fields": {
+        "damage_increase": 414,
+        "hero": 2,
+        "level": 8,
+        "health_recovery": 1692,
+        "summoned_unites": 20,
+        "ability_time": "10.00",
+        "extra_data": "{u'Speed Increase': 25}"
+    },
+    "model": "core.heroability",
+    "pk": 8
+},
+{
+    "fields": {
+        "damage_increase": 300,
+        "hero": 1,
+        "level": 1,
+        "health_recovery": 150,
+        "summoned_unites": 5,
+        "ability_time": "3.60",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 9
+},
+{
+    "fields": {
+        "damage_increase": 355,
+        "hero": 1,
+        "level": 2,
+        "health_recovery": 175,
+        "summoned_unites": 6,
+        "ability_time": "3.80",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 10
+},
+{
+    "fields": {
+        "damage_increase": 416,
+        "hero": 1,
+        "level": 3,
+        "health_recovery": 200,
+        "summoned_unites": 7,
+        "ability_time": "4.00",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 11
+},
+{
+    "fields": {
+        "damage_increase": 483,
+        "hero": 1,
+        "level": 4,
+        "health_recovery": 225,
+        "summoned_unites": 8,
+        "ability_time": "4.20",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 12
+},
+{
+    "fields": {
+        "damage_increase": 557,
+        "hero": 1,
+        "level": 5,
+        "health_recovery": 250,
+        "summoned_unites": 9,
+        "ability_time": "4.40",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 13
+},
+{
+    "fields": {
+        "damage_increase": 638,
+        "hero": 1,
+        "level": 6,
+        "health_recovery": 275,
+        "summoned_unites": 10,
+        "ability_time": "4.60",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 14
+},
+{
+    "fields": {
+        "damage_increase": 725,
+        "hero": 1,
+        "level": 7,
+        "health_recovery": 300,
+        "summoned_unites": 11,
+        "ability_time": "4.80",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 15
+},
+{
+    "fields": {
+        "damage_increase": 819,
+        "hero": 1,
+        "level": 8,
+        "health_recovery": 325,
+        "summoned_unites": 12,
+        "ability_time": "5.00",
+        "extra_data": null
+    },
+    "model": "core.heroability",
+    "pk": 16
+},
+{
+    "fields": {
+        "training_cost": 40000,
+        "hero": 1,
+        "level": 1,
+        "damage_per_second": 160,
+        "town_hall_level_required": 9,
+        "training_time": null,
+        "regeneration_time": 1800,
+        "ability_level": null,
+        "hitpoints": 725,
+        "damage_per_hit": "120.00"
+    },
+    "model": "core.herolevel",
+    "pk": 1
+},
+{
+    "fields": {
+        "training_cost": 22500,
+        "hero": 1,
+        "level": 2,
+        "damage_per_second": 164,
+        "town_hall_level_required": 9,
+        "training_time": 43200,
+        "regeneration_time": 1920,
+        "ability_level": null,
+        "hitpoints": 740,
+        "damage_per_hit": "123.00"
+    },
+    "model": "core.herolevel",
+    "pk": 3
+},
+{
+    "fields": {
+        "training_cost": 25000,
+        "hero": 1,
+        "level": 3,
+        "damage_per_second": 168,
+        "town_hall_level_required": 9,
+        "training_time": 86400,
+        "regeneration_time": 2040,
+        "ability_level": null,
+        "hitpoints": 755,
+        "damage_per_hit": "126.00"
+    },
+    "model": "core.herolevel",
+    "pk": 4
+},
+{
+    "fields": {
+        "training_cost": 10000,
+        "hero": 2,
+        "level": 1,
+        "damage_per_second": 120,
+        "town_hall_level_required": 7,
+        "training_time": null,
+        "regeneration_time": 1800,
+        "ability_level": null,
+        "hitpoints": 1700,
+        "damage_per_hit": "144.00"
+    },
+    "model": "core.herolevel",
+    "pk": 5
+},
+{
+    "fields": {
+        "training_cost": 12500,
+        "hero": 2,
+        "level": 2,
+        "damage_per_second": 122,
+        "town_hall_level_required": 7,
+        "training_time": 720,
+        "regeneration_time": 1920,
+        "ability_level": null,
+        "hitpoints": 1742,
+        "damage_per_hit": "146.40"
+    },
+    "model": "core.herolevel",
+    "pk": 6
+},
+{
+    "fields": {
+        "training_cost": 15000,
+        "hero": 2,
+        "level": 3,
+        "damage_per_second": 124,
+        "town_hall_level_required": 7,
+        "training_time": 86400,
+        "regeneration_time": 2040,
+        "ability_level": null,
+        "hitpoints": 1786,
+        "damage_per_hit": "148.80"
+    },
+    "model": "core.herolevel",
+    "pk": 7
+},
+{
+    "fields": {
+        "training_cost": 17500,
+        "hero": 2,
+        "level": 4,
+        "damage_per_second": 127,
+        "town_hall_level_required": 7,
+        "training_time": 129600,
+        "regeneration_time": 2160,
+        "ability_level": null,
+        "hitpoints": 1830,
+        "damage_per_hit": "152.40"
+    },
+    "model": "core.herolevel",
+    "pk": 8
+},
+{
+    "fields": {
+        "training_cost": 20000,
+        "hero": 2,
+        "level": 5,
+        "damage_per_second": 129,
+        "town_hall_level_required": 7,
+        "training_time": 172800,
+        "regeneration_time": 2280,
+        "ability_level": 1,
+        "hitpoints": 1876,
+        "damage_per_hit": "154.80"
+    },
+    "model": "core.herolevel",
+    "pk": 9
+},
+{
+    "fields": {
+        "training_cost": 22500,
+        "hero": 2,
+        "level": 6,
+        "damage_per_second": 132,
+        "town_hall_level_required": 8,
+        "training_time": 216000,
+        "regeneration_time": 2400,
+        "ability_level": 1,
+        "hitpoints": 1923,
+        "damage_per_hit": "158.40"
+    },
+    "model": "core.herolevel",
+    "pk": 10
+},
+{
+    "fields": {
+        "training_cost": 25000,
+        "hero": 2,
+        "level": 7,
+        "damage_per_second": 135,
+        "town_hall_level_required": 8,
+        "training_time": 259200,
+        "regeneration_time": 2520,
+        "ability_level": 1,
+        "hitpoints": 1971,
+        "damage_per_hit": "162.00"
+    },
+    "model": "core.herolevel",
+    "pk": 11
+},
+{
+    "fields": {
+        "training_cost": 30000,
+        "hero": 2,
+        "level": 8,
+        "damage_per_second": 137,
+        "town_hall_level_required": 8,
+        "training_time": 302400,
+        "regeneration_time": 2640,
+        "ability_level": 1,
+        "hitpoints": 2020,
+        "damage_per_hit": "164.40"
+    },
+    "model": "core.herolevel",
+    "pk": 12
+},
+{
+    "fields": {
+        "training_cost": 35000,
+        "hero": 2,
+        "level": 9,
+        "damage_per_second": 140,
+        "town_hall_level_required": 8,
+        "training_time": 345600,
+        "regeneration_time": 2760,
+        "ability_level": 1,
+        "hitpoints": 2071,
+        "damage_per_hit": "168.00"
+    },
+    "model": "core.herolevel",
+    "pk": 13
+},
+{
+    "fields": {
+        "training_cost": 40000,
+        "hero": 2,
+        "level": 10,
+        "damage_per_second": 143,
+        "town_hall_level_required": 8,
+        "training_time": 388800,
+        "regeneration_time": 2880,
+        "ability_level": 2,
+        "hitpoints": 2123,
+        "damage_per_hit": "171.60"
+    },
+    "model": "core.herolevel",
+    "pk": 14
+},
+{
+    "fields": {
+        "training_cost": 45000,
+        "hero": 2,
+        "level": 11,
+        "damage_per_second": 146,
+        "town_hall_level_required": 9,
+        "training_time": 432000,
+        "regeneration_time": 3000,
+        "ability_level": 2,
+        "hitpoints": 2176,
+        "damage_per_hit": "175.20"
+    },
+    "model": "core.herolevel",
+    "pk": 15
+},
+{
+    "fields": {
+        "training_cost": 50000,
+        "hero": 2,
+        "level": 12,
+        "damage_per_second": 149,
+        "town_hall_level_required": 9,
+        "training_time": 475200,
+        "regeneration_time": 3120,
+        "ability_level": 2,
+        "hitpoints": 2230,
+        "damage_per_hit": "178.80"
+    },
+    "model": "core.herolevel",
+    "pk": 16
+},
+{
+    "fields": {
+        "training_cost": 55000,
+        "hero": 2,
+        "level": 13,
+        "damage_per_second": 152,
+        "town_hall_level_required": 9,
+        "training_time": 518400,
+        "regeneration_time": 3240,
+        "ability_level": 2,
+        "hitpoints": 2286,
+        "damage_per_hit": "182.40"
+    },
+    "model": "core.herolevel",
+    "pk": 17
+},
+{
+    "fields": {
+        "training_cost": 60000,
+        "hero": 2,
+        "level": 14,
+        "damage_per_second": 155,
+        "town_hall_level_required": 9,
+        "training_time": 561600,
+        "regeneration_time": 3360,
+        "ability_level": 2,
+        "hitpoints": 2343,
+        "damage_per_hit": "186.00"
+    },
+    "model": "core.herolevel",
+    "pk": 18
+},
+{
+    "fields": {
+        "training_cost": 65000,
+        "hero": 2,
+        "level": 15,
+        "damage_per_second": 158,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3480,
+        "ability_level": 3,
+        "hitpoints": 2402,
+        "damage_per_hit": "189.60"
+    },
+    "model": "core.herolevel",
+    "pk": 19
+},
+{
+    "fields": {
+        "training_cost": 70000,
+        "hero": 2,
+        "level": 16,
+        "damage_per_second": 161,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3600,
+        "ability_level": 3,
+        "hitpoints": 2462,
+        "damage_per_hit": "193.20"
+    },
+    "model": "core.herolevel",
+    "pk": 20
+},
+{
+    "fields": {
+        "training_cost": 75000,
+        "hero": 2,
+        "level": 17,
+        "damage_per_second": 164,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3720,
+        "ability_level": 3,
+        "hitpoints": 2523,
+        "damage_per_hit": "196.80"
+    },
+    "model": "core.herolevel",
+    "pk": 21
+},
+{
+    "fields": {
+        "training_cost": 80000,
+        "hero": 2,
+        "level": 18,
+        "damage_per_second": 168,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3840,
+        "ability_level": 3,
+        "hitpoints": 2586,
+        "damage_per_hit": "201.60"
+    },
+    "model": "core.herolevel",
+    "pk": 22
+},
+{
+    "fields": {
+        "training_cost": 85000,
+        "hero": 2,
+        "level": 19,
+        "damage_per_second": 171,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3960,
+        "ability_level": 3,
+        "hitpoints": 2651,
+        "damage_per_hit": "205.20"
+    },
+    "model": "core.herolevel",
+    "pk": 23
+},
+{
+    "fields": {
+        "training_cost": 90000,
+        "hero": 2,
+        "level": 20,
+        "damage_per_second": 174,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4080,
+        "ability_level": 4,
+        "hitpoints": 2717,
+        "damage_per_hit": "208.80"
+    },
+    "model": "core.herolevel",
+    "pk": 24
+},
+{
+    "fields": {
+        "training_cost": 95000,
+        "hero": 2,
+        "level": 21,
+        "damage_per_second": 178,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4200,
+        "ability_level": 4,
+        "hitpoints": 2785,
+        "damage_per_hit": "213.60"
+    },
+    "model": "core.herolevel",
+    "pk": 25
+},
+{
+    "fields": {
+        "training_cost": 100000,
+        "hero": 2,
+        "level": 22,
+        "damage_per_second": 181,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4320,
+        "ability_level": 4,
+        "hitpoints": 2855,
+        "damage_per_hit": "217.20"
+    },
+    "model": "core.herolevel",
+    "pk": 26
+},
+{
+    "fields": {
+        "training_cost": 105000,
+        "hero": 2,
+        "level": 23,
+        "damage_per_second": 185,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4440,
+        "ability_level": 4,
+        "hitpoints": 2926,
+        "damage_per_hit": "222.00"
+    },
+    "model": "core.herolevel",
+    "pk": 27
+},
+{
+    "fields": {
+        "training_cost": 110000,
+        "hero": 2,
+        "level": 24,
+        "damage_per_second": 189,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4560,
+        "ability_level": 4,
+        "hitpoints": 2999,
+        "damage_per_hit": "226.80"
+    },
+    "model": "core.herolevel",
+    "pk": 28
+},
+{
+    "fields": {
+        "training_cost": 115000,
+        "hero": 2,
+        "level": 25,
+        "damage_per_second": 193,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4680,
+        "ability_level": 5,
+        "hitpoints": 3074,
+        "damage_per_hit": "231.60"
+    },
+    "model": "core.herolevel",
+    "pk": 29
+},
+{
+    "fields": {
+        "training_cost": 120000,
+        "hero": 2,
+        "level": 26,
+        "damage_per_second": 196,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4800,
+        "ability_level": 5,
+        "hitpoints": 3151,
+        "damage_per_hit": "235.20"
+    },
+    "model": "core.herolevel",
+    "pk": 30
+},
+{
+    "fields": {
+        "training_cost": 125000,
+        "hero": 2,
+        "level": 27,
+        "damage_per_second": 200,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4920,
+        "ability_level": 5,
+        "hitpoints": 3230,
+        "damage_per_hit": "240.00"
+    },
+    "model": "core.herolevel",
+    "pk": 31
+},
+{
+    "fields": {
+        "training_cost": 130000,
+        "hero": 2,
+        "level": 28,
+        "damage_per_second": 204,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 5040,
+        "ability_level": 5,
+        "hitpoints": 3311,
+        "damage_per_hit": "244.80"
+    },
+    "model": "core.herolevel",
+    "pk": 32
+},
+{
+    "fields": {
+        "training_cost": 135000,
+        "hero": 2,
+        "level": 29,
+        "damage_per_second": 208,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 5160,
+        "ability_level": 5,
+        "hitpoints": 3394,
+        "damage_per_hit": "249.60"
+    },
+    "model": "core.herolevel",
+    "pk": 33
+},
+{
+    "fields": {
+        "training_cost": 140000,
+        "hero": 2,
+        "level": 30,
+        "damage_per_second": 213,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 5280,
+        "ability_level": 6,
+        "hitpoints": 3478,
+        "damage_per_hit": "255.60"
+    },
+    "model": "core.herolevel",
+    "pk": 34
+},
+{
+    "fields": {
+        "training_cost": 145000,
+        "hero": 2,
+        "level": 31,
+        "damage_per_second": 217,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5400,
+        "ability_level": 6,
+        "hitpoints": 3565,
+        "damage_per_hit": "260.40"
+    },
+    "model": "core.herolevel",
+    "pk": 35
+},
+{
+    "fields": {
+        "training_cost": 150000,
+        "hero": 2,
+        "level": 32,
+        "damage_per_second": 221,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5520,
+        "ability_level": 6,
+        "hitpoints": 3655,
+        "damage_per_hit": "265.20"
+    },
+    "model": "core.herolevel",
+    "pk": 36
+},
+{
+    "fields": {
+        "training_cost": 155000,
+        "hero": 2,
+        "level": 33,
+        "damage_per_second": 226,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5640,
+        "ability_level": 6,
+        "hitpoints": 3746,
+        "damage_per_hit": "271.20"
+    },
+    "model": "core.herolevel",
+    "pk": 37
+},
+{
+    "fields": {
+        "training_cost": 160000,
+        "hero": 2,
+        "level": 34,
+        "damage_per_second": 230,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5760,
+        "ability_level": 6,
+        "hitpoints": 3840,
+        "damage_per_hit": "276.00"
+    },
+    "model": "core.herolevel",
+    "pk": 38
+},
+{
+    "fields": {
+        "training_cost": 165000,
+        "hero": 2,
+        "level": 35,
+        "damage_per_second": 235,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5880,
+        "ability_level": 7,
+        "hitpoints": 3936,
+        "damage_per_hit": "282.00"
+    },
+    "model": "core.herolevel",
+    "pk": 39
+},
+{
+    "fields": {
+        "training_cost": 170000,
+        "hero": 2,
+        "level": 36,
+        "damage_per_second": 239,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6000,
+        "ability_level": 7,
+        "hitpoints": 4034,
+        "damage_per_hit": "286.80"
+    },
+    "model": "core.herolevel",
+    "pk": 40
+},
+{
+    "fields": {
+        "training_cost": 175000,
+        "hero": 2,
+        "level": 37,
+        "damage_per_second": 244,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6120,
+        "ability_level": 7,
+        "hitpoints": 4135,
+        "damage_per_hit": "292.80"
+    },
+    "model": "core.herolevel",
+    "pk": 41
+},
+{
+    "fields": {
+        "training_cost": 180000,
+        "hero": 2,
+        "level": 38,
+        "damage_per_second": 249,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6240,
+        "ability_level": 7,
+        "hitpoints": 4238,
+        "damage_per_hit": "298.80"
+    },
+    "model": "core.herolevel",
+    "pk": 42
+},
+{
+    "fields": {
+        "training_cost": 185000,
+        "hero": 2,
+        "level": 39,
+        "damage_per_second": 254,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6360,
+        "ability_level": 7,
+        "hitpoints": 4344,
+        "damage_per_hit": "304.80"
+    },
+    "model": "core.herolevel",
+    "pk": 43
+},
+{
+    "fields": {
+        "training_cost": 190000,
+        "hero": 2,
+        "level": 40,
+        "damage_per_second": 259,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6480,
+        "ability_level": 8,
+        "hitpoints": 4453,
+        "damage_per_hit": "310.80"
+    },
+    "model": "core.herolevel",
+    "pk": 44
+},
+{
+    "fields": {
+        "training_cost": 27500,
+        "hero": 1,
+        "level": 4,
+        "damage_per_second": 172,
+        "town_hall_level_required": 9,
+        "training_time": 129600,
+        "regeneration_time": 2160,
+        "ability_level": null,
+        "hitpoints": 771,
+        "damage_per_hit": "129.00"
+    },
+    "model": "core.herolevel",
+    "pk": 45
+},
+{
+    "fields": {
+        "training_cost": 30000,
+        "hero": 1,
+        "level": 5,
+        "damage_per_second": 176,
+        "town_hall_level_required": 9,
+        "training_time": 172800,
+        "regeneration_time": 2280,
+        "ability_level": 9,
+        "hitpoints": 787,
+        "damage_per_hit": "132.00"
+    },
+    "model": "core.herolevel",
+    "pk": 46
+},
+{
+    "fields": {
+        "training_cost": 32500,
+        "hero": 1,
+        "level": 6,
+        "damage_per_second": 181,
+        "town_hall_level_required": 9,
+        "training_time": 216000,
+        "regeneration_time": 2400,
+        "ability_level": 9,
+        "hitpoints": 804,
+        "damage_per_hit": "135.75"
+    },
+    "model": "core.herolevel",
+    "pk": 47
+},
+{
+    "fields": {
+        "training_cost": 35000,
+        "hero": 1,
+        "level": 7,
+        "damage_per_second": 185,
+        "town_hall_level_required": 9,
+        "training_time": 259200,
+        "regeneration_time": 2520,
+        "ability_level": 9,
+        "hitpoints": 821,
+        "damage_per_hit": "138.75"
+    },
+    "model": "core.herolevel",
+    "pk": 48
+},
+{
+    "fields": {
+        "training_cost": 40000,
+        "hero": 1,
+        "level": 8,
+        "damage_per_second": 190,
+        "town_hall_level_required": 9,
+        "training_time": 302400,
+        "regeneration_time": 2640,
+        "ability_level": 9,
+        "hitpoints": 838,
+        "damage_per_hit": "142.50"
+    },
+    "model": "core.herolevel",
+    "pk": 49
+},
+{
+    "fields": {
+        "training_cost": 45000,
+        "hero": 1,
+        "level": 9,
+        "damage_per_second": 194,
+        "town_hall_level_required": 9,
+        "training_time": 345600,
+        "regeneration_time": 2760,
+        "ability_level": 9,
+        "hitpoints": 856,
+        "damage_per_hit": "145.50"
+    },
+    "model": "core.herolevel",
+    "pk": 50
+},
+{
+    "fields": {
+        "training_cost": 50000,
+        "hero": 1,
+        "level": 10,
+        "damage_per_second": 199,
+        "town_hall_level_required": 9,
+        "training_time": 388800,
+        "regeneration_time": 2880,
+        "ability_level": 10,
+        "hitpoints": 874,
+        "damage_per_hit": "149.25"
+    },
+    "model": "core.herolevel",
+    "pk": 51
+},
+{
+    "fields": {
+        "training_cost": 55000,
+        "hero": 1,
+        "level": 11,
+        "damage_per_second": 204,
+        "town_hall_level_required": 9,
+        "training_time": 432000,
+        "regeneration_time": 3000,
+        "ability_level": 10,
+        "hitpoints": 892,
+        "damage_per_hit": "153.00"
+    },
+    "model": "core.herolevel",
+    "pk": 52
+},
+{
+    "fields": {
+        "training_cost": 60000,
+        "hero": 1,
+        "level": 12,
+        "damage_per_second": 209,
+        "town_hall_level_required": 9,
+        "training_time": 475200,
+        "regeneration_time": 3120,
+        "ability_level": 10,
+        "hitpoints": 911,
+        "damage_per_hit": "156.75"
+    },
+    "model": "core.herolevel",
+    "pk": 53
+},
+{
+    "fields": {
+        "training_cost": 65000,
+        "hero": 1,
+        "level": 13,
+        "damage_per_second": 215,
+        "town_hall_level_required": 9,
+        "training_time": 518400,
+        "regeneration_time": 3240,
+        "ability_level": 10,
+        "hitpoints": 930,
+        "damage_per_hit": "161.25"
+    },
+    "model": "core.herolevel",
+    "pk": 54
+},
+{
+    "fields": {
+        "training_cost": 70000,
+        "hero": 1,
+        "level": 14,
+        "damage_per_second": 220,
+        "town_hall_level_required": 9,
+        "training_time": 561600,
+        "regeneration_time": 3360,
+        "ability_level": 10,
+        "hitpoints": 949,
+        "damage_per_hit": "165.00"
+    },
+    "model": "core.herolevel",
+    "pk": 55
+},
+{
+    "fields": {
+        "training_cost": 75000,
+        "hero": 1,
+        "level": 15,
+        "damage_per_second": 226,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3480,
+        "ability_level": 11,
+        "hitpoints": 969,
+        "damage_per_hit": "169.50"
+    },
+    "model": "core.herolevel",
+    "pk": 56
+},
+{
+    "fields": {
+        "training_cost": 80000,
+        "hero": 1,
+        "level": 16,
+        "damage_per_second": 231,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3600,
+        "ability_level": 11,
+        "hitpoints": 990,
+        "damage_per_hit": "173.25"
+    },
+    "model": "core.herolevel",
+    "pk": 57
+},
+{
+    "fields": {
+        "training_cost": 85000,
+        "hero": 1,
+        "level": 17,
+        "damage_per_second": 237,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3720,
+        "ability_level": 11,
+        "hitpoints": 1010,
+        "damage_per_hit": "177.75"
+    },
+    "model": "core.herolevel",
+    "pk": 58
+},
+{
+    "fields": {
+        "training_cost": 90000,
+        "hero": 1,
+        "level": 18,
+        "damage_per_second": 243,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3840,
+        "ability_level": 11,
+        "hitpoints": 1032,
+        "damage_per_hit": "182.25"
+    },
+    "model": "core.herolevel",
+    "pk": 59
+},
+{
+    "fields": {
+        "training_cost": 95000,
+        "hero": 1,
+        "level": 19,
+        "damage_per_second": 249,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 3960,
+        "ability_level": 11,
+        "hitpoints": 1053,
+        "damage_per_hit": "186.75"
+    },
+    "model": "core.herolevel",
+    "pk": 60
+},
+{
+    "fields": {
+        "training_cost": 100000,
+        "hero": 1,
+        "level": 20,
+        "damage_per_second": 255,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4080,
+        "ability_level": 12,
+        "hitpoints": 1076,
+        "damage_per_hit": "191.25"
+    },
+    "model": "core.herolevel",
+    "pk": 61
+},
+{
+    "fields": {
+        "training_cost": 105000,
+        "hero": 1,
+        "level": 21,
+        "damage_per_second": 262,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4200,
+        "ability_level": 12,
+        "hitpoints": 1098,
+        "damage_per_hit": "196.50"
+    },
+    "model": "core.herolevel",
+    "pk": 62
+},
+{
+    "fields": {
+        "training_cost": 110000,
+        "hero": 1,
+        "level": 22,
+        "damage_per_second": 268,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4320,
+        "ability_level": 12,
+        "hitpoints": 1121,
+        "damage_per_hit": "201.00"
+    },
+    "model": "core.herolevel",
+    "pk": 63
+},
+{
+    "fields": {
+        "training_cost": 115000,
+        "hero": 1,
+        "level": 23,
+        "damage_per_second": 275,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4440,
+        "ability_level": 12,
+        "hitpoints": 1145,
+        "damage_per_hit": "206.25"
+    },
+    "model": "core.herolevel",
+    "pk": 64
+},
+{
+    "fields": {
+        "training_cost": 120000,
+        "hero": 1,
+        "level": 24,
+        "damage_per_second": 282,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4560,
+        "ability_level": 12,
+        "hitpoints": 1169,
+        "damage_per_hit": "211.50"
+    },
+    "model": "core.herolevel",
+    "pk": 65
+},
+{
+    "fields": {
+        "training_cost": 125000,
+        "hero": 1,
+        "level": 25,
+        "damage_per_second": 289,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4680,
+        "ability_level": 13,
+        "hitpoints": 1193,
+        "damage_per_hit": "216.75"
+    },
+    "model": "core.herolevel",
+    "pk": 66
+},
+{
+    "fields": {
+        "training_cost": 130000,
+        "hero": 1,
+        "level": 26,
+        "damage_per_second": 296,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4800,
+        "ability_level": 13,
+        "hitpoints": 1218,
+        "damage_per_hit": "222.00"
+    },
+    "model": "core.herolevel",
+    "pk": 67
+},
+{
+    "fields": {
+        "training_cost": 135000,
+        "hero": 1,
+        "level": 27,
+        "damage_per_second": 304,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 4920,
+        "ability_level": 13,
+        "hitpoints": 1244,
+        "damage_per_hit": "228.00"
+    },
+    "model": "core.herolevel",
+    "pk": 68
+},
+{
+    "fields": {
+        "training_cost": 140000,
+        "hero": 1,
+        "level": 28,
+        "damage_per_second": 311,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 5040,
+        "ability_level": 13,
+        "hitpoints": 1270,
+        "damage_per_hit": "233.25"
+    },
+    "model": "core.herolevel",
+    "pk": 69
+},
+{
+    "fields": {
+        "training_cost": 145000,
+        "hero": 1,
+        "level": 29,
+        "damage_per_second": 319,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 5160,
+        "ability_level": 13,
+        "hitpoints": 1297,
+        "damage_per_hit": "239.25"
+    },
+    "model": "core.herolevel",
+    "pk": 70
+},
+{
+    "fields": {
+        "training_cost": 150000,
+        "hero": 1,
+        "level": 30,
+        "damage_per_second": 327,
+        "town_hall_level_required": 9,
+        "training_time": 604800,
+        "regeneration_time": 5280,
+        "ability_level": 14,
+        "hitpoints": 1324,
+        "damage_per_hit": "245.25"
+    },
+    "model": "core.herolevel",
+    "pk": 71
+},
+{
+    "fields": {
+        "training_cost": 155000,
+        "hero": 1,
+        "level": 31,
+        "damage_per_second": 335,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5400,
+        "ability_level": 14,
+        "hitpoints": 1352,
+        "damage_per_hit": "251.25"
+    },
+    "model": "core.herolevel",
+    "pk": 72
+},
+{
+    "fields": {
+        "training_cost": 160000,
+        "hero": 1,
+        "level": 32,
+        "damage_per_second": 344,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5520,
+        "ability_level": 14,
+        "hitpoints": 1380,
+        "damage_per_hit": "258.00"
+    },
+    "model": "core.herolevel",
+    "pk": 73
+},
+{
+    "fields": {
+        "training_cost": 165000,
+        "hero": 1,
+        "level": 33,
+        "damage_per_second": 352,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5640,
+        "ability_level": 14,
+        "hitpoints": 1409,
+        "damage_per_hit": "264.00"
+    },
+    "model": "core.herolevel",
+    "pk": 74
+},
+{
+    "fields": {
+        "training_cost": 170000,
+        "hero": 1,
+        "level": 34,
+        "damage_per_second": 361,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5760,
+        "ability_level": 14,
+        "hitpoints": 1439,
+        "damage_per_hit": "270.75"
+    },
+    "model": "core.herolevel",
+    "pk": 75
+},
+{
+    "fields": {
+        "training_cost": 175000,
+        "hero": 1,
+        "level": 35,
+        "damage_per_second": 370,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 5880,
+        "ability_level": 15,
+        "hitpoints": 1469,
+        "damage_per_hit": "277.50"
+    },
+    "model": "core.herolevel",
+    "pk": 76
+},
+{
+    "fields": {
+        "training_cost": 180000,
+        "hero": 1,
+        "level": 36,
+        "damage_per_second": 379,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6000,
+        "ability_level": 15,
+        "hitpoints": 1500,
+        "damage_per_hit": "284.25"
+    },
+    "model": "core.herolevel",
+    "pk": 77
+},
+{
+    "fields": {
+        "training_cost": 185000,
+        "hero": 1,
+        "level": 37,
+        "damage_per_second": 389,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6120,
+        "ability_level": 15,
+        "hitpoints": 1532,
+        "damage_per_hit": "291.75"
+    },
+    "model": "core.herolevel",
+    "pk": 78
+},
+{
+    "fields": {
+        "training_cost": 190000,
+        "hero": 1,
+        "level": 38,
+        "damage_per_second": 398,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6240,
+        "ability_level": 15,
+        "hitpoints": 1564,
+        "damage_per_hit": "298.50"
+    },
+    "model": "core.herolevel",
+    "pk": 79
+},
+{
+    "fields": {
+        "training_cost": 195000,
+        "hero": 1,
+        "level": 39,
+        "damage_per_second": 408,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6360,
+        "ability_level": 15,
+        "hitpoints": 1597,
+        "damage_per_hit": "306.00"
+    },
+    "model": "core.herolevel",
+    "pk": 80
+},
+{
+    "fields": {
+        "training_cost": 200000,
+        "hero": 1,
+        "level": 40,
+        "damage_per_second": 419,
+        "town_hall_level_required": 10,
+        "training_time": 604800,
+        "regeneration_time": 6480,
+        "ability_level": 16,
+        "hitpoints": 1630,
+        "damage_per_hit": "314.25"
+    },
+    "model": "core.herolevel",
+    "pk": 81
+}
+]
