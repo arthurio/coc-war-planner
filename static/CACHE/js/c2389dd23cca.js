@@ -1,0 +1,1 @@
+window.chooserUrls.embedsChooser='/cms-admin/embeds/chooser/';registerHalloPlugin('hallowagtailembeds');

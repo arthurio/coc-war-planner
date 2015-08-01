@@ -1,0 +1,1 @@
+window.chooserUrls.snippetChooser='/cms-admin/snippets/choose/';

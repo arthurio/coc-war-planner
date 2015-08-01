@@ -1,0 +1,1 @@
+window.chooserUrls.imageChooser='/cms-admin/images/chooser/';registerHalloPlugin('hallowagtailimage');
