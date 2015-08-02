@@ -10,9 +10,12 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cms-admin/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'', include(wagtail_urls)),
+    url(r'^search/$', 'coc_war_planner.search.views.search', name='search'),
     #url(r'^api/', include('coc_war_planner.api.urls')),
-    #url(r'^/', include('coc_war_planner.www.urls')),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'', include(wagtail_urls)),
 ]
 
 if settings.DEBUG:

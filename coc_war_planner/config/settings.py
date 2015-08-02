@@ -29,13 +29,24 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'coc_war_planner.core',
     'coc_war_planner.api',
-    'coc_war_planner.www',
+    'coc_war_planner.home',
+    'coc_war_planner.search',
+
     'django_extensions',
+
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+
     'annoying',
 
     'taggit',
@@ -144,3 +155,15 @@ WAGTAIL_SITE_NAME = "Clash of Clan War Planner"
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+# allauth conf
+LOGIN_REDIRECT_URL = "/profile"
