@@ -1,8 +1,8 @@
 V0.0
 ==
-- Setup wagtail
-- Create an account
-- Create models:
+- [X] Setup wagtail
+- [X] Create an account
+- [X] Create models:
     * Member
         fk(user)
         lvl
@@ -105,12 +105,18 @@ V0.0
         durations
         iteration=choice(first, second)
 
-- Admin interface to create Spells, Troops and Heros (or initial_data)
+- [X] Admin interface to create Spells, Troops and Heros (or initial_data)
+- [X] Setup Authentication system
 
 v0.1
 ==
-- leave clan/remove user from clan
-- Apis:
+- [ ] Create the default template
+- [ ] Add some content to the homepage
+- [ ] Add a navigation
+- [ ] Add login/logout
+- [ ] Create the profile page
+- [ ] leave clan/remove user from clan
+- [ ] Apis:
     * Choose clan (+add clan)
     * Set TownHall
     * Set Troops
@@ -121,14 +127,14 @@ v0.1
 
 v0.2
 ==
-- Do some UI work
+- [ ] Do some UI work
 
 v1.0
 ==
-- Create all the models for the buildings
-- Clan autocomplete
-- Set troops on attacks
+- [ ] Create all the models for the buildings
+- [ ] Clan autocomplete
+- [ ] Set troops on attacks
 
 v1.1
 ==
-- Suggest enemy clans members if exist when setting up attacks
+- [ ] Suggest enemy clans members if exist when setting up attacks
