@@ -35,8 +35,7 @@ INSTALLED_APPS = (
 
     'coc_war_planner.core',
     'coc_war_planner.api',
-    'coc_war_planner.home',
-    'coc_war_planner.search',
+    'coc_war_planner.www',
 
     'django_extensions',
 
@@ -52,18 +51,6 @@ INSTALLED_APPS = (
     'taggit',
     'compressor',
     'modelcluster',
-
-    'wagtail.wagtailcore',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailimages',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailsites',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailforms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -75,9 +62,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 )
 
 ROOT_URLCONF = 'coc_war_planner.urls'
@@ -147,10 +131,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-
-# Wagtail settings
-
-WAGTAIL_SITE_NAME = "Clash of Clan War Planner"
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
