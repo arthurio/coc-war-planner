@@ -2,20 +2,15 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from wagtail.wagtailadmin import urls as wagtailadmin_urls
-from wagtail.wagtaildocs import urls as wagtaildocs_urls
-from wagtail.wagtailcore import urls as wagtail_urls
-
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^cms-admin/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'^search/$', 'coc_war_planner.search.views.search', name='search'),
     #url(r'^api/', include('coc_war_planner.api.urls')),
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'', include(wagtail_urls)),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name="logout"),
+    url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
+    url(r'', include('coc_war_planner.www.urls')),
 ]
 
 if settings.DEBUG:

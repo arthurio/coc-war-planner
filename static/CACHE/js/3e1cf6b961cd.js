@@ -1,1 +1,0 @@
-window.chooserUrls.documentChooser='/cms-admin/documents/chooser/';registerHalloPlugin('hallowagtaildoclink');

@@ -1,5 +1,3 @@
-{% load static wagtailuserbar %}
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -8,28 +6,24 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
+        <title>{% block title %}{% endblock title %}{% block title_suffix %}{% endblock %}</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/wag.css' %}">
-
-        {% block extra_css %}
+        {% block css %}
             {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
+        {% endblock css %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
+        {% include 'navigation.html' %}
 
         {% block content %}{% endblock %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/wag.js' %}"></script>
+        {% include 'footer.html' %}
 
-        {% block extra_js %}
+        {% block javascript %}
             {# Override this in templates to add extra javascript #}
-        {% endblock %}
+        {% endblock javascript %}
     </body>
 </html>
