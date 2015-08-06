@@ -1,4 +1,7 @@
+from annoying.fields import AutoOneToOneField
+
 from django.db import models
+from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 
 from gettext import gettext as _
@@ -7,6 +10,7 @@ from annoying.fields import JSONField
 
 
 class Clan(models.Model):
+    chief = models.ForeignKey('Member', related_name="+")
     name = models.CharField(max_length=50)
     pin = models.CharField(max_length=20)
     location = models.CharField(max_length=50)
@@ -15,8 +19,14 @@ class Clan(models.Model):
 
 class Member(User):
     user = models.OneToOneField(User)
-    level = models.IntegerField()
-    clan = models.ForeignKey(Clan)
+    level = models.IntegerField(null=True, blank=True)
+    clan = models.ForeignKey(Clan, null=True, blank=True)
+
+def create_member(sender, instance, created, **kwargs):
+    if created and instance.is_superuser is False:
+        Member.objects.create(user=instance)
+
+post_save.connect(create_member, sender=User)
 
 
 class Troop(models.Model):

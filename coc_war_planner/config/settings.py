@@ -51,6 +51,8 @@ INSTALLED_APPS = (
     'taggit',
     'compressor',
     'modelcluster',
+
+    'webpack_loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,7 +95,7 @@ WSGI_APPLICATION = 'coc_war_planner.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'coc_war_planner',
+        'NAME': 'coc',
         'USER': 'root'
     }
 }
@@ -147,3 +149,18 @@ AUTHENTICATION_BACKENDS = (
 
 # allauth conf
 LOGIN_REDIRECT_URL = "/profile"
+
+WEBPACK_LOADER = {
+    'BUNDLE_DIR_NAME': 'js/bundles/', # must end with slash
+    'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    'POLL_DELAY': 0.2,
+    'IGNORE': ['.+\.hot-update.js', '.+\.map']
+}
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

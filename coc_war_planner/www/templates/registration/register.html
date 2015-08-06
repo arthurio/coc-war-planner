@@ -1,15 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="post" action="/rest-auth/registration/">
+<form id="register" method="post" action="/rest-auth/registration/">
     {% csrf_token %}
+    <label>Username</label>
     <input type="text" name="username" />
+    <label>Email</label>
     <input type="text" name="email" />
+    <label>Password</label>
     <input type="password" name="password1" />
+    <label>Confirm Password</label>
     <input type="password" name="password2" />
+    <label>First Name</label>
     <input type="text" name="first_name" />
+    <label>Last Name</label>
     <input type="text" name="last_name" />
     <button type="submit">Submit</button>
 </form>
 {% endblock content %}
 
+{% block javascript %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#register").submit(function (e) {
+            e.preventDefault();
+            $.ajax($(this).attr('action'), {
+                data: $(this).serialize(),
+                method: $(this).attr('method'),
+                success: function (response) {
+                    // response => {username: "arthurio2", email: "arthur.rio44+2@gmail.com", first_name: "", last_name: ""}
+                    alert("You will receive an email to complete your registration.");
+                },
+                error: function (errors) {
+                    alert("You didn't fill something properly, make sure your password as at least 6 characters");
+                    // errors.status
+                    // erros.responseJSON: { password1: Array[1], password2...}
+                }
+            });
+        });
+    });
+</script>
+{% endblock javascript %}
