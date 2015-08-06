@@ -57,3 +57,7 @@ docs/_build/
 target/
 
 .DS_Store
+
+# JS Stuff
+bower_components
+node_modules

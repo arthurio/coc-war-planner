@@ -1,0 +1,1 @@
+- [ ] Redirect to dashboard if logged in an trying to access: register, login, home

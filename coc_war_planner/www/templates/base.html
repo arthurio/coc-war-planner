@@ -1,0 +1,46 @@
+{% load staticfiles %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>{% if debug %}Dev | {% endif %}{% block title %}Home{% endblock title %}{% block title_suffix %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="{% static "css/basscss.min.css" %}" />
+        <link rel="stylesheet" href="{% static "css/global.css" %}" />
+        <link rel="stylesheet" href="{% static "css/header.css" %}" />
+        <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+
+        {% block css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock css %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock header %}
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock footer %}
+
+        {% render_bundle 'main' %}
+
+        {% block javascript %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock javascript %}
+    </body>
+</html>
