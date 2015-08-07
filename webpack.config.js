@@ -5,15 +5,15 @@ var path = require("path"),
 module.exports = {
     context: __dirname,
     entry: [
-        'webpack-dev-server/client?http://localhost:3000',
+        'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
         './coc_war_planner/static/js/client/index.jsx'
     ],
 
     output: {
-        path: path.resolve('./static/js/bundles/'),
+        path: path.resolve('./coc_war_planner/static/js/bundles/'),
         filename: "[name]-[hash].js",
-        publicPath: 'http://localhost:3000/static/js/bundles/' // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
+        publicPath: 'http://localhost:8080/static/js/bundles/' // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
     },
 
     plugins: [
