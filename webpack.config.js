@@ -1,27 +1,37 @@
 var path = require("path"),
-    BundleTracker = require("webpack-bundle-tracker");
+    webpack = require('webpack'),
+    BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
-    // configuration
     context: __dirname,
-    entry: './coc_war_planner/static/js/client/index.jsx',
+    entry: [
+        'webpack-dev-server/client?http://localhost:8080',
+        'webpack/hot/only-dev-server',
+        './coc_war_planner/static/js/client/index.jsx'
+    ],
+
     output: {
-        path: './coc_war_planner/static/js/bundles',
-        filename: '[name]-[hash].js'
+        path: path.resolve('./coc_war_planner/static/js/bundles/'),
+        filename: "[name]-[hash].js",
+        publicPath: 'http://localhost:8080/static/js/bundles/' // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
     },
+
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin(), // don't reload if there is an error
+        new BundleTracker({filename: './webpack-stats.json'})
+    ],
+
     module: {
-        loaders: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel?optional[]=runtime'
-            }
-        ]
+        loaders: [{
+            // we pass the output from babel loader to react-hot loader
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loaders: ['react-hot', 'babel']
+        }]
     },
     resolve: {
+        modulesDirectories: ['node_modules', 'bower_components'],
         extensions: ['', '.js', '.jsx']
-    },
-    plugins: [
-        new BundleTracker({filename: './webpack-stats.json'})
-    ]
-};
+    }
+}
