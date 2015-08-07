@@ -34,7 +34,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 WEBPACK_LOADER.update({
-    'BUNDLE_DIR_NAME': 'js/dist/',
+    'BUNDLE_DIR_NAME': 'js/bundles/',
     'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-prod.json')
 })
 
