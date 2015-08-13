@@ -147,17 +147,17 @@ v1.2
 v1.3
 ====
 - [ ] Write Api tests:
-    * Create troops (success)
-    * Create existing troops
-    * Create troops for someone else
-    * Create troops wrong type of level
-    * Update troops (success)
-    * Update troops (wrong type of level)
-    * Update troops of someone else
-    * Update troops not existing
-    * Get troops (success)
-    * Get troops of someone else (success)
-    * Get troops not existing
+    * [ ] Create troops (success)
+    * [ ] Create existing troops
+    * [ ] Create troops for someone else
+    * [ ] Create troops wrong type of level
+    * [ ] Update troops (success)
+    * [ ] Update troops (wrong type of level)
+    * [ ] Update troops of someone else
+    * [ ] Update troops not existing
+    * [ ] Get troops (success)
+    * [ ] Get troops of someone else (success)
+    * [ ] Get troops not existing
 
 v2.0
 ====
