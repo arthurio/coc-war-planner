@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import django.contrib.auth.models
 from django.conf import settings
 import annoying.fields
 
@@ -10,7 +9,6 @@ import annoying.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('auth', '0006_require_contenttypes_0002'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
@@ -88,18 +86,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Member',
             fields=[
-                ('user', models.OneToOneField(primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('level', models.IntegerField(null=True, blank=True)),
                 ('clan', models.ForeignKey(blank=True, to='core.Clan', null=True)),
-            ],
-            options={
-                'abstract': False,
-                'verbose_name': 'user',
-                'verbose_name_plural': 'users',
-            },
-            bases=('auth.user',),
-            managers=[
-                ('objects', django.contrib.auth.models.UserManager()),
+                ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.CreateModel(
@@ -135,6 +125,7 @@ class Migration(migrations.Migration):
             name='Spells',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('member', models.ForeignKey(to='core.Member')),
             ],
         ),
         migrations.CreateModel(
@@ -142,7 +133,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('level', models.IntegerField()),
-                ('user', models.ForeignKey(to='core.Member')),
+                ('member', models.ForeignKey(to='core.Member')),
             ],
         ),
         migrations.CreateModel(
@@ -182,9 +173,9 @@ class Migration(migrations.Migration):
             name='Troops',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('member', models.ForeignKey(to='core.Member')),
                 ('troop', models.ForeignKey(to='core.Troop')),
                 ('troop_level', models.ForeignKey(to='core.TroopLevel')),
-                ('user', models.ForeignKey(to='core.Member')),
             ],
         ),
         migrations.CreateModel(
@@ -196,7 +187,7 @@ class Migration(migrations.Migration):
                 ('preparation_time_remaining', models.IntegerField()),
                 ('time_remaining', models.IntegerField()),
                 ('clan', models.ForeignKey(to='core.Clan')),
-                ('members', models.ManyToManyField(to=settings.AUTH_USER_MODEL)),
+                ('members', models.ManyToManyField(to='core.Member')),
             ],
         ),
         migrations.AddField(
@@ -210,13 +201,8 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(to='core.TroopLevel'),
         ),
         migrations.AddField(
-            model_name='spells',
-            name='user',
-            field=models.ForeignKey(to='core.Member'),
-        ),
-        migrations.AddField(
             model_name='heros',
-            name='user',
+            name='member',
             field=models.ForeignKey(to='core.Member'),
         ),
         migrations.AddField(
@@ -236,7 +222,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterUniqueTogether(
             name='troops',
-            unique_together=set([('user', 'troop')]),
+            unique_together=set([('member', 'troop')]),
         ),
         migrations.AlterUniqueTogether(
             name='trooplevel',
@@ -244,7 +230,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterUniqueTogether(
             name='spells',
-            unique_together=set([('user', 'spell')]),
+            unique_together=set([('member', 'spell')]),
         ),
         migrations.AlterUniqueTogether(
             name='spelllevel',
@@ -252,7 +238,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterUniqueTogether(
             name='heros',
-            unique_together=set([('user', 'hero')]),
+            unique_together=set([('member', 'hero')]),
         ),
         migrations.AlterUniqueTogether(
             name='herolevel',

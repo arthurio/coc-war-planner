@@ -17,10 +17,16 @@ class Clan(models.Model):
     level = models.IntegerField()
 
 
-class Member(User):
+class Member(models.Model):
     user = models.OneToOneField(User)
     level = models.IntegerField(null=True, blank=True)
     clan = models.ForeignKey(Clan, null=True, blank=True)
+    name = models.CharField(max_length=50, null=True, blank=True)
+
+    def __unicode__(self):
+        clan = getattr(self, 'clan') if hasattr(self, 'clan') else 'On his own'
+        name = self.name or self.user.username or self.user.first_name
+        return "[%s] %s" % (clan, name)
 
 def create_member(sender, instance, created, **kwargs):
     if created and instance.is_superuser is False:
@@ -81,12 +87,12 @@ class TroopLevel(models.Model):
 
 
 class Troops(models.Model):
-    user = models.ForeignKey(Member)
+    member = models.ForeignKey(Member)
     troop = models.ForeignKey(Troop)
     troop_level = models.ForeignKey(TroopLevel)
 
     class Meta:
-        unique_together = ('user', 'troop')
+        unique_together = ('member', 'troop')
 
 
 class Spell(models.Model):
@@ -131,12 +137,12 @@ class SpellLevel(models.Model):
 
 
 class Spells(models.Model):
-    user = models.ForeignKey(Member)
+    member = models.ForeignKey(Member)
     spell = models.ForeignKey(Troop)
     spell_level = models.ForeignKey(TroopLevel)
 
     class Meta:
-        unique_together = ('user', 'spell')
+        unique_together = ('member', 'spell')
 
 
 class Hero(models.Model):
@@ -186,16 +192,16 @@ class HeroLevel(models.Model):
 
 
 class Heros(models.Model):
-    user = models.ForeignKey(Member)
+    member = models.ForeignKey(Member)
     hero = models.ForeignKey(Hero)
     hero_level = models.ForeignKey(HeroLevel)
 
     class Meta:
-        unique_together = ('user', 'hero')
+        unique_together = ('member', 'hero')
 
 
 class TownHall(models.Model):
-    user = models.ForeignKey(Member)
+    member = models.ForeignKey(Member)
     level = models.IntegerField()
 
 
@@ -203,7 +209,7 @@ class War(models.Model):
     clan = models.ForeignKey(Clan)
     enemy_clan = models.CharField(max_length=100)
     number_of_participants = models.IntegerField()
-    members = models.ManyToManyField(User)
+    members = models.ManyToManyField(Member)
     preparation_time_remaining = models.IntegerField()  # in seconds
     time_remaining = models.IntegerField()  # in seconds
 
