@@ -41,10 +41,9 @@ class TroopsPostSerializer(serializers.ModelSerializer):
         fields = ('member', 'troop', 'troop_level')
 
     def create(self, validated_data):
-        _filter = {'id': serializer.data.get('troop_level')}
-        troop_level = TroopLevel.objects.get(pk=validated_data.get('troop_level'))
+        troop_level = validated_data.get('troop_level')
         troop = validated_data.get('troop')
-        if troop_level.troop_id != troop:
+        if troop_level.troop != troop:
             raise serializers.ValidationError({
                 'troop_level': "Must match the selected type of troop."
             })
@@ -61,7 +60,7 @@ class TroopsPutSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         troop_level = validated_data.get('troop_level')
-        if instance.troop.id != troop_level.troop.id:
+        if instance.troop != troop_level.troop:
             raise serializers.ValidationError({
                 'troop_level': "Must match the selected type of troop."
             })
