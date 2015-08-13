@@ -8,6 +8,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register(r'clans', views.ClanViewSet)
 router.register(r'members', views.MemberViewSet)
+router.register(r'troops', views.TroopsViewSet, base_name='troops')
 
 urlpatterns = [
     url(r'^', include(router.urls)),
