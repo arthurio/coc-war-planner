@@ -1,5 +1,5 @@
 V0.0
-==
+====
 - [X] Setup wagtail
 - [X] Create an account
 - [X] Create models:
@@ -109,7 +109,7 @@ V0.0
 - [X] Setup Authentication system
 
 v0.1
-==
+====
 - [ ] Create the default template
 - [ ] Add some content to the homepage
 - [ ] Add a navigation
@@ -126,15 +126,38 @@ v0.1
     * Affect attacks to clan members
 
 v0.2
-==
+====
 - [ ] Do some UI work
 
 v1.0
-==
+====
 - [ ] Create all the models for the buildings
 - [ ] Clan autocomplete
 - [ ] Set troops on attacks
 
 v1.1
-==
+====
 - [ ] Suggest enemy clans members if exist when setting up attacks
+
+v1.2
+====
+- [ ] Force email validation when registering
+
+v1.3
+====
+- [ ] Write Api tests:
+    * Create troops (success)
+    * Create existing troops
+    * Create troops for someone else
+    * Create troops wrong type of level
+    * Update troops (success)
+    * Update troops (wrong type of level)
+    * Update troops of someone else
+    * Update troops not existing
+    * Get troops (success)
+    * Get troops of someone else (success)
+    * Get troops not existing
+
+v2.0
+====
+- [ ] Customize Browsable API style
