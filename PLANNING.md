@@ -113,17 +113,18 @@ v0.1
 - [ ] Create the default template
 - [ ] Add some content to the homepage
 - [ ] Add a navigation
-- [ ] Add login/logout
+- [X] Add login/logout
 - [ ] Create the profile page
+- [ ] Create the dashboard page
 - [ ] leave clan/remove user from clan
 - [ ] Apis:
-    * Choose clan (+add clan)
-    * Set TownHall
-    * Set Troops
-    * Set Spells
-    * Set Heros
-    * Create war
-    * Affect attacks to clan members
+    * [ ] Choose clan (+add clan)
+    * [ ] Set TownHall
+    * [X] Set Troops
+    * [ ] Set Spells
+    * [ ] Set Heros
+    * [ ] Create war
+    * [ ] Affect attacks to clan members
 
 v0.2
 ====
