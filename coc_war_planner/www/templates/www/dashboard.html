@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="troops"></div>
+{% endblock content %}
+
+
+{% block js %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax('/api/troops/', {
+            data: {
+                member_id: {{ user.member.id }}
+            },
+            success: function (troopsAssociations) {
+                new TroopsDashboard(troopsAssociations, $("#troops")[0]);
+            }
+        });
+    });
+</script>
+{% endblock js %}
