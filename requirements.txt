@@ -10,3 +10,4 @@ django-toolbelt==0.0.1
 django-rest-auth==0.4.0
 django-allauth==0.22.0
 django-webpack-loader==0.1.2.1
+newrelic==2.54.0.41

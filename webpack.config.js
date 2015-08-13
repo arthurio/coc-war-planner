@@ -1,23 +1,23 @@
 var path = require("path"),
     webpack = require('webpack'),
-    BundleTracker = require('webpack-bundle-tracker');
+    BundleTracker = require('webpack-bundle-tracker'),
+    Clean = require('clean-webpack-plugin');
 
 module.exports = {
     context: __dirname,
     entry: [
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
+        'es7-autobinder',
         './coc_war_planner/static/js/client/index.jsx'
     ],
 
     output: {
         path: path.resolve('./coc_war_planner/static/js/bundles/'),
         filename: "[name]-[hash].js",
-        publicPath: 'http://localhost:8080/static/js/bundles/' // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
+        publicPath: '/static/js/bundles/'
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+        new Clean(['coc_war_planner/static/js/dist', 'coc_war_planner/static/js/bundles']),
         new webpack.NoErrorsPlugin(), // don't reload if there is an error
         new BundleTracker({filename: './webpack-stats.json'})
     ],
@@ -27,7 +27,7 @@ module.exports = {
             // we pass the output from babel loader to react-hot loader
             test: /\.jsx?$/,
             exclude: /node_modules/,
-            loaders: ['react-hot', 'babel']
+            loaders: ['babel?stage=1']
         }]
     },
     resolve: {
