@@ -7,6 +7,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
+        'es7-autobinder',
         './coc_war_planner/static/js/client/index.jsx'
     ],
 
@@ -27,7 +28,7 @@ module.exports = {
             // we pass the output from babel loader to react-hot loader
             test: /\.jsx?$/,
             exclude: /node_modules/,
-            loaders: ['react-hot', 'babel']
+            loaders: ['react-hot', 'babel?stage=1']
         }]
     },
     resolve: {
