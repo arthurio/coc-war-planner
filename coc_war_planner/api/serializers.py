@@ -49,7 +49,7 @@ class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = ('id', 'level', 'clan')
+        fields = ('id', 'name', 'level', 'clan')
 
 
 class TroopSerializer(serializers.ModelSerializer):
