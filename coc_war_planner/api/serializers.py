@@ -14,7 +14,7 @@ class ClanSerializer(serializers.ModelSerializer):
         model = Clan
         fields = ('id', 'chief', 'name', 'pin', 'location', 'level')
 
-    def save(self, instance, validated_data):
+    def create(self, validated_data):
         chief = validated_data.get('chief')
         # Check if the chief is already chief of another clan
         if chief.clan or chief.is_chief():
@@ -22,7 +22,7 @@ class ClanSerializer(serializers.ModelSerializer):
                 'chief': "The chief can't be part in another clan"
             })
 
-        return super(ClanSerializer, self).save(instance, validated_data)
+        return super(ClanSerializer, self).create(validated_data)
 
 class ClanPutSerializer(serializers.ModelSerializer):
 

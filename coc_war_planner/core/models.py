@@ -11,8 +11,8 @@ from annoying.fields import JSONField
 
 class Clan(models.Model):
     chief = models.ForeignKey('Member', null=True, related_name="+")
-    name = models.CharField(max_length=50)
-    pin = models.CharField(max_length=20)
+    name = models.CharField(max_length=50, unique=True)
+    pin = models.CharField(max_length=20, unique=True)
     location = models.CharField(max_length=50)
     level = models.IntegerField()
 

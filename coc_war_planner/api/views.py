@@ -32,8 +32,8 @@ class ClanViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         instance = serializer.save(chief=self.request.user.member)
-        request.user.member.clan = instance
-        request.user.member.save()
+        self.request.user.member.clan = instance
+        self.request.user.member.save()
 
     def get_serializer_class(self):
         if self.request.method == 'PUT':
