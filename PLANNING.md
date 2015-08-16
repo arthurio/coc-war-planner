@@ -1,5 +1,7 @@
-V0.0
-====
+First usable Minimum Viable Product
+===================================
+:white_check_mark: V0.0
+-----------------------
 - [X] Setup wagtail
 - [X] Create an account
 - [X] Create models:
@@ -109,16 +111,15 @@ V0.0
 - [X] Setup Authentication system
 
 v0.1
-====
+----
 - [ ] Create the default template
-- [ ] Add some content to the homepage
 - [ ] Add a navigation
 - [X] Add login/logout
 - [ ] Create the profile page
-- [ ] Create the dashboard page
-- [ ] leave clan/remove user from clan
+- [X] Leave clan
+- [ ] Remove user from clan (only chief)
 - [ ] Apis:
-    * [ ] Choose clan (+add clan)
+    * [X] Choose clan (+add clan)
     * [ ] Set TownHall
     * [X] Set Troops
     * [ ] Set Spells
@@ -127,26 +128,51 @@ v0.1
     * [ ] Affect attacks to clan members
 
 v0.2
-====
-- [ ] Do some UI work
+----
+- [ ] Create the dashboard page
+
+v0.3
+----
+- [ ] Troops UX
+    * Add troop
+    * Update troop level
+- [ ] Heros
+    * Add hero
+    * Update hero level
+- [ ] Potions
+    * Add potion
+    * Update potion level
+
+
+Improve UX - UI
+===============
+v1.0
+----
+- [ ] Clan autocomplete
 - [ ] Make country a list (choice)
 
-v1.0
-====
-- [ ] Create all the models for the buildings
-- [ ] Clan autocomplete
-- [ ] Set troops on attacks
-
 v1.1
-====
+----
 - [ ] Suggest enemy clans members if exist when setting up attacks
 
 v1.2
-====
+----
 - [ ] Force email validation when registering
 
 v1.3
-====
+----
+- [ ] Customize Browsable API style
+
+Improve Perfomances
+===================
+v2.0
+----
+- [ ] Create indexes on the mysql DB for search/ordering fields
+
+Write tests
+===========
+v3.0
+----
 - [ ] Write Api tests:
     * [ ] Create troops (success)
     * [ ] Create existing troops
@@ -164,6 +190,9 @@ v1.3
     * [ ] Create clan -> set current as chief + become member of clan
     * [ ] Create clan -> forbidden if already part of a clan
 
-v2.0
-====
-- [ ] Customize Browsable API style
+Add extra functionalities
+=========================
+v4.0
+----
+- [ ] Create all the models for the buildings
+- [ ] Remove user from clan
