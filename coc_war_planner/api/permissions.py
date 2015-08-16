@@ -6,7 +6,16 @@ class IsChiefOrReadOnly(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
 
-        return obj.chief == request.user
+        return obj.chief == request.user.member
+
+
+class IsNotPartOfClanOrCreateNotAllowed(permissions.BasePermission):
+    def has_permission(self, request, view):
+        if request.method == "POST":
+            return (request.user.member.clan is None
+                    and not request.user.member.is_chief())
+
+        return True
 
 
 class IsUserOrReadOnly(permissions.BasePermission):
@@ -23,4 +32,12 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
             return True
 
         return obj.member.user == request.user
+
+
+class CreateNotAllowed(permissions.BasePermission):
+    def has_permission(self, request, view):
+        if request.method == "POST":
+            return False
+
+        return True
 

@@ -1,7 +1,7 @@
 from annoying.fields import AutoOneToOneField
 
 from django.db import models
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 from django.contrib.auth.models import User
 
 from gettext import gettext as _
@@ -10,17 +10,20 @@ from annoying.fields import JSONField
 
 
 class Clan(models.Model):
-    chief = models.ForeignKey('Member', related_name="+")
+    chief = models.ForeignKey('Member', null=True, related_name="+")
     name = models.CharField(max_length=50)
     pin = models.CharField(max_length=20)
     location = models.CharField(max_length=50)
     level = models.IntegerField()
 
+    def __unicode__(self):
+        return '%s - %s' % (self.name, self.location)
+
 
 class Member(models.Model):
     user = models.OneToOneField(User)
     level = models.IntegerField(null=True, blank=True)
-    clan = models.ForeignKey(Clan, null=True, blank=True)
+    clan = models.ForeignKey(Clan, null=True, blank=True, related_name="members")
     name = models.CharField(max_length=50, null=True, blank=True)
 
     def __unicode__(self):
@@ -28,12 +31,36 @@ class Member(models.Model):
         name = self.name or self.user.username or self.user.first_name
         return "[%s] %s" % (clan, name)
 
+    def is_chief(self):
+        return Clan.objects.filter(chief=self).exists()
+
 def create_member(sender, instance, created, **kwargs):
     if created and instance.is_superuser is False:
         Member.objects.create(user=instance)
 
 post_save.connect(create_member, sender=User)
 
+def update_member(sender, instance, created, **kwargs):
+    if not created:
+        # If member left a clan
+        if not instance.clan:
+            try:
+                # Check if he was the chief of the clan he left
+                clan = Clan.objects.get(chief=instance)
+                # get the clan
+                members = clan.members.all()
+                new_chief = members[0] if len(members) else None
+                clan.chief = new_chief
+                clan.save()
+            except Clan.DoesNotExist:
+                pass
+
+    # If the member joins a clan without a chief, make him the chief
+    if not created and instance.clan and not instance.clan.chief:
+        instance.clan.chief = instance
+        instance.clan.save()
+
+post_save.connect(update_member, sender=Member)
 
 class Troop(models.Model):
 

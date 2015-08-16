@@ -1,11 +1,16 @@
+from coc_war_planner.api.permissions import CreateNotAllowed
 from coc_war_planner.api.permissions import IsChiefOrReadOnly
 from coc_war_planner.api.permissions import IsUserOrReadOnly
 from coc_war_planner.api.permissions import IsOwnerOrReadOnly
+from coc_war_planner.api.permissions import IsNotPartOfClanOrCreateNotAllowed
+
 from coc_war_planner.api.serializers import ClanSerializer
+from coc_war_planner.api.serializers import ClanPutSerializer
 from coc_war_planner.api.serializers import MemberSerializer
 from coc_war_planner.api.serializers import TroopsPostSerializer
 from coc_war_planner.api.serializers import TroopsPutSerializer
 from coc_war_planner.api.serializers import TroopsGetSerializer
+
 from coc_war_planner.core.models import Clan
 from coc_war_planner.core.models import Member
 from coc_war_planner.core.models import Troops
@@ -22,16 +27,26 @@ class ClanViewSet(viewsets.ModelViewSet):
     queryset = Clan.objects.all()
     serializer_class = ClanSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
-            IsChiefOrReadOnly,)
+            IsChiefOrReadOnly,
+            IsNotPartOfClanOrCreateNotAllowed)
 
     def perform_create(self, serializer):
-        serializer.save(chief=self.request.user)
+        instance = serializer.save(chief=self.request.user.member)
+        request.user.member.clan = instance
+        request.user.member.save()
+
+    def get_serializer_class(self):
+        if self.request.method == 'PUT':
+            return ClanPutSerializer
+
+        return ClanSerializer
 
 
 class MemberViewSet(viewsets.ModelViewSet):
     queryset = Member.objects.all()
     serializer_class = MemberSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
+            CreateNotAllowed,
             IsUserOrReadOnly,)
 
 

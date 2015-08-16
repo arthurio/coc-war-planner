@@ -8,16 +8,48 @@ from coc_war_planner.core.models import Troops
 
 class ClanSerializer(serializers.ModelSerializer):
 
+    chief = serializers.PrimaryKeyRelatedField(required=True, queryset=Member.objects.filter(clan=None))
+
     class Meta:
         model = Clan
-        fields = ('id', 'name', 'pin', 'location', 'level')
+        fields = ('id', 'chief', 'name', 'pin', 'location', 'level')
+
+    def save(self, instance, validated_data):
+        chief = validated_data.get('chief')
+        # Check if the chief is already chief of another clan
+        if chief.clan or chief.is_chief():
+            raise serializers.ValidationError({
+                'chief': "The chief can't be part in another clan"
+            })
+
+        return super(ClanSerializer, self).save(instance, validated_data)
+
+class ClanPutSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Clan
+        fields = ('id', 'chief', 'name', 'pin', 'location', 'level')
+
+    def get_fields(self, *args, **kwargs):
+        fields = super(ClanPutSerializer, self).get_fields(*args, **kwargs)
+        fields['chief'].queryset = self.instance.members.all()
+        return fields
+
+    def update(self, instance, validated_data):
+        chief = validated_data.get('chief')
+        if chief not in instance.members.all():
+            raise serializers.ValidationError({
+                'chief': "The new chief must be part of the clan"
+            })
+
+        return super(ClanPutSerializer, self).update(instance, validated_data)
 
 
 class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = ('id', 'user', 'level', 'clan')
+        fields = ('id', 'level', 'clan')
 
 
 class TroopSerializer(serializers.ModelSerializer):
