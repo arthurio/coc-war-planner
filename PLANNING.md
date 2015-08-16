@@ -129,6 +129,7 @@ v0.1
 v0.2
 ====
 - [ ] Do some UI work
+- [ ] Make country a list (choice)
 
 v1.0
 ====
@@ -147,17 +148,21 @@ v1.2
 v1.3
 ====
 - [ ] Write Api tests:
-    * Create troops (success)
-    * Create existing troops
-    * Create troops for someone else
-    * Create troops wrong type of level
-    * Update troops (success)
-    * Update troops (wrong type of level)
-    * Update troops of someone else
-    * Update troops not existing
-    * Get troops (success)
-    * Get troops of someone else (success)
-    * Get troops not existing
+    * [ ] Create troops (success)
+    * [ ] Create existing troops
+    * [ ] Create troops for someone else
+    * [ ] Create troops wrong type of level
+    * [ ] Update troops (success)
+    * [ ] Update troops (wrong type of level)
+    * [ ] Update troops of someone else
+    * [ ] Update troops not existing
+    * [ ] Get troops (success)
+    * [ ] Get troops of someone else (success)
+    * [ ] Get troops not existing
+    * [ ] Non clan member update the chief of the clan
+    * [ ] Leave clan -> transfer ownership
+    * [ ] Create clan -> set current as chief + become member of clan
+    * [ ] Create clan -> forbidden if already part of a clan
 
 v2.0
 ====
