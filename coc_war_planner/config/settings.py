@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'coc_war_planner.www',
 
     'django_extensions',
+    'django_filters',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -157,3 +158,6 @@ WEBPACK_LOADER = {
     'IGNORE': ['.+\.hot-update.js', '.+\.map']
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
+}

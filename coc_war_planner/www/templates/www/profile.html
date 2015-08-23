@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="member-profile"></div>
+{% endblock content %}
+
+{% block js %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        new MemberProfile("{% url 'api:member-detail' pk=user.member.pk %}", $("#member-profile")[0]);
+    });
+</script>
+{% endblock js %}
+

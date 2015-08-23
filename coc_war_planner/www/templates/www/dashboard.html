@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div id="clan"></div>
 <div id="troops"></div>
 {% endblock content %}
 
@@ -8,14 +9,8 @@
 {% block js %}
 <script type="text/javascript">
     $(document).ready(function () {
-        $.ajax('/api/troops/', {
-            data: {
-                member_id: {{ user.member.id }}
-            },
-            success: function (troopsAssociations) {
-                new TroopsDashboard(troopsAssociations, $("#troops")[0]);
-            }
-        });
+        new TroopsDashboard("{% url 'api:troops-list' %}", $("#troops")[0]);
+        new ClanDashboard("{% url 'api:clan-detail' pk=user.member.clan.pk %}", $("#clan")[0]);
     });
 </script>
 {% endblock js %}

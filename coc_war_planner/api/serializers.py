@@ -45,11 +45,22 @@ class ClanPutSerializer(serializers.ModelSerializer):
         return super(ClanPutSerializer, self).update(instance, validated_data)
 
 
+class MemberGetSerializer(serializers.ModelSerializer):
+
+    clan = ClanSerializer()
+
+    class Meta:
+        model = Member
+        fields = ('id', 'name', 'level', 'clan')
+        read_only_fields = ('id',)
+
+
 class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
         fields = ('id', 'name', 'level', 'clan')
+        read_only_fields = ('id',)
 
 
 class TroopSerializer(serializers.ModelSerializer):

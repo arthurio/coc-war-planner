@@ -8,8 +8,8 @@ class Troop extends React.Component {
   }
 }
 Troop.propTypes = {
-  troop: React.PropTypes.object,
-  troop_level: React.PropTypes.object
+  troop: React.PropTypes.object.isRequired,
+  troop_level: React.PropTypes.object.isRequired
 };
 
 module.exports = Troop;

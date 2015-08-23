@@ -112,36 +112,47 @@ First usable Minimum Viable Product
 
 v0.1
 ----
-- [ ] Create the default template
-- [ ] Add a navigation
 - [X] Add login/logout
 - [ ] Create the profile page
-- [X] Leave clan
-- [ ] Remove user from clan (only chief)
+    * [X] Update basic info (level, name)
+    * [X] Change clan
+    * [ ] Add missing clan
 - [ ] Apis:
-    * [X] Choose clan (+add clan)
+    * [X] List/Update/Add clan
+    * [X] Member: Join/Leave clan
     * [ ] Set TownHall
     * [X] Set Troops
+    * [ ] List Troop level
+    * [ ] List Troop
     * [ ] Set Spells
     * [ ] Set Heros
     * [ ] Create war
     * [ ] Affect attacks to clan members
+- [ ] Create the dashboard page
+    * [X] Show Clan
+    * [X] Show Troops
+    * [ ] Show Heros
+    * [ ] Show Spells
 
 v0.2
 ----
-- [ ] Create the dashboard page
+- [ ] Troops UX
+    * [ ] Add troop
+    * [ ] Update troop level
+- [ ] Heros UX
+    * [ ] Add hero
+    * [ ] Update hero level
+- [ ] Spells UX
+    * [ ] Add spell
+    * [ ] Update spell level
+- [ ] Clan UX
+    * [ ] Leave clan
+    * [ ] Remove user from clan (only chief)
 
 v0.3
 ----
-- [ ] Troops UX
-    * Add troop
-    * Update troop level
-- [ ] Heros
-    * Add hero
-    * Update hero level
-- [ ] Potions
-    * Add potion
-    * Update potion level
+- [ ] Create the default template
+- [ ] Add a navigation
 
 
 Improve UX - UI
@@ -154,6 +165,8 @@ v1.0
 v1.1
 ----
 - [ ] Suggest enemy clans members if exist when setting up attacks
+- [ ] Limit troop/spells/heros and their level based on the townhall
+  level
 
 v1.2
 ----
@@ -162,6 +175,12 @@ v1.2
 v1.3
 ----
 - [ ] Customize Browsable API style
+- [ ] Add a loader on the dashboard page for the different components
+
+v1.4
+----
+- [ ] Use scss or stylus
+- [ ] Customize loader http://fgnass.github.io/spin.js/
 
 Improve Perfomances
 ===================
@@ -189,6 +208,7 @@ v3.0
     * [ ] Leave clan -> transfer ownership
     * [ ] Create clan -> set current as chief + become member of clan
     * [ ] Create clan -> forbidden if already part of a clan
+    * [ ] Update member (new clan or leave clan) -> update clans the member was a chief of
 
 Add extra functionalities
 =========================
