@@ -11,7 +11,7 @@ router.register(r'members', views.MemberViewSet)
 router.register(r'troops', views.TroopsViewSet, base_name='troops')
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^', include(router.urls, namespace='api')),
     url(r'^auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 

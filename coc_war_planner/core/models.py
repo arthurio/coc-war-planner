@@ -42,23 +42,25 @@ post_save.connect(create_member, sender=User)
 
 def update_member(sender, instance, created, **kwargs):
     if not created:
-        # If member left a clan
-        if not instance.clan:
-            try:
-                # Check if he was the chief of the clan he left
-                clan = Clan.objects.get(chief=instance)
-                # get the clan
-                members = clan.members.all()
-                new_chief = members[0] if len(members) else None
-                clan.chief = new_chief
-                clan.save()
-            except Clan.DoesNotExist:
-                pass
+        # Check if the member was the chief of another clan he left
+        clans = Clan.objects.filter(chief=instance)
+        print instance.clan
+        if instance.clan:
+            clans = clans.exclude(pk=instance.clan.pk)
 
-    # If the member joins a clan without a chief, make him the chief
-    if not created and instance.clan and not instance.clan.chief:
-        instance.clan.chief = instance
-        instance.clan.save()
+        # We loop just in case somehow the member was the chief of
+        # multiple clans but that should not be possible
+        for clan in clans:
+            # get the other members of the clan
+            members = clan.members.all()
+            new_chief = members[0] if len(members) else None
+            clan.chief = new_chief
+            clan.save()
+
+        # If the member joins a clan without a chief, make him the chief
+        if instance.clan and not instance.clan.chief:
+            instance.clan.chief = instance
+            instance.clan.save()
 
 post_save.connect(update_member, sender=Member)
 

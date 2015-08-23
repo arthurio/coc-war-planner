@@ -1,5 +1,7 @@
-V0.0
-====
+First usable Minimum Viable Product
+===================================
+:white_check_mark: V0.0
+-----------------------
 - [X] Setup wagtail
 - [X] Create an account
 - [X] Create models:
@@ -109,44 +111,87 @@ V0.0
 - [X] Setup Authentication system
 
 v0.1
-====
-- [ ] Create the default template
-- [ ] Add some content to the homepage
-- [ ] Add a navigation
+----
 - [X] Add login/logout
 - [ ] Create the profile page
-- [ ] Create the dashboard page
-- [ ] leave clan/remove user from clan
+    * [X] Update basic info (level, name)
+    * [X] Change clan
+    * [ ] Add missing clan
 - [ ] Apis:
-    * [ ] Choose clan (+add clan)
+    * [X] List/Update/Add clan
+    * [X] Member: Join/Leave clan
     * [ ] Set TownHall
     * [X] Set Troops
+    * [ ] List Troop level
+    * [ ] List Troop
     * [ ] Set Spells
     * [ ] Set Heros
     * [ ] Create war
     * [ ] Affect attacks to clan members
+- [ ] Create the dashboard page
+    * [X] Show Clan
+    * [X] Show Troops
+    * [ ] Show Heros
+    * [ ] Show Spells
 
 v0.2
-====
-- [ ] Do some UI work
+----
+- [ ] Troops UX
+    * [ ] Add troop
+    * [ ] Update troop level
+- [ ] Heros UX
+    * [ ] Add hero
+    * [ ] Update hero level
+- [ ] Spells UX
+    * [ ] Add spell
+    * [ ] Update spell level
+- [ ] Clan UX
+    * [ ] Leave clan
+    * [ ] Remove user from clan (only chief)
+
+v0.3
+----
+- [ ] Create the default template
+- [ ] Add a navigation
+
+
+Improve UX - UI
+===============
+v1.0
+----
+- [ ] Clan autocomplete
 - [ ] Make country a list (choice)
 
-v1.0
-====
-- [ ] Create all the models for the buildings
-- [ ] Clan autocomplete
-- [ ] Set troops on attacks
-
 v1.1
-====
+----
 - [ ] Suggest enemy clans members if exist when setting up attacks
+- [ ] Limit troop/spells/heros and their level based on the townhall
+  level
 
 v1.2
-====
+----
 - [ ] Force email validation when registering
 
 v1.3
-====
+----
+- [ ] Customize Browsable API style
+- [ ] Add a loader on the dashboard page for the different components
+
+v1.4
+----
+- [ ] Use scss or stylus
+- [ ] Customize loader http://fgnass.github.io/spin.js/
+
+Improve Perfomances
+===================
+v2.0
+----
+- [ ] Create indexes on the mysql DB for search/ordering fields
+
+Write tests
+===========
+v3.0
+----
 - [ ] Write Api tests:
     * [ ] Create troops (success)
     * [ ] Create existing troops
@@ -163,7 +208,11 @@ v1.3
     * [ ] Leave clan -> transfer ownership
     * [ ] Create clan -> set current as chief + become member of clan
     * [ ] Create clan -> forbidden if already part of a clan
+    * [ ] Update member (new clan or leave clan) -> update clans the member was a chief of
 
-v2.0
-====
-- [ ] Customize Browsable API style
+Add extra functionalities
+=========================
+v4.0
+----
+- [ ] Create all the models for the buildings
+- [ ] Remove user from clan
