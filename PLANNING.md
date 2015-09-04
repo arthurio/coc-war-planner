@@ -216,3 +216,7 @@ v4.0
 ----
 - [ ] Create all the models for the buildings
 - [ ] Remove user from clan
+ 
+Ideas
+=====
+- [ ] Base comparasion tool
