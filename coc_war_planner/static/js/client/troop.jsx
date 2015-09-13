@@ -1,4 +1,4 @@
-const React = require("react");
+import React from "react";
 
 class Troop extends React.Component {
   render() {

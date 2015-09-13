@@ -1,5 +1,5 @@
-const React = require("react"),
-      Loader = require('react-loader');
+import React from "react";
+import Loader from "react-loader";
 
 class CustomLoader extends Loader {
   render () {

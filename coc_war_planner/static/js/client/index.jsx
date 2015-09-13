@@ -1,7 +1,7 @@
-const React = require("react"),
-      Clan = require("./clan"),
-      Member = require("./member"),
-      Troops = require("./troops");
+import React from "react";
+import Clan from "./clan";
+import Member from "./member";
+import Troops from "./troops";
 
 class ClanDashboard {
   constructor(source, element) {

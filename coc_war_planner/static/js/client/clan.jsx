@@ -1,5 +1,5 @@
-const React = require("react"),
-      Loader = require("./loader");
+import React from "react";
+import Loader from "./loader";
 
 class Clan extends React.Component {
   constructor(props) {

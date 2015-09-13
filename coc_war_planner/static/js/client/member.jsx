@@ -1,10 +1,10 @@
-const React = require("react"),
-      autobound = require("es7-autobinder").autobound,
-      cookie = require("react-cookie"),
-      Typeahead = require('react-typeahead').Typeahead,
-      Loader = require("./loader");
+import React from "react";
+import {autobound} from "es7-autobinder";
+import cookie from "react-cookie";
+import {Typeahead} from "react-typeahead";
+import Loader from "./loader";
 
-require("babel/polyfill");
+import "babel/polyfill";
 
 class Member extends React.Component {
   constructor(props) {

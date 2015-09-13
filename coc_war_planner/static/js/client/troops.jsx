@@ -1,7 +1,7 @@
-const React = require("react"),
-      autobound = require("es7-autobinder").autobound,
-      Loader = require("./loader"),
-      Troop = require("./troop");
+import React from "react";
+import {autobound} from "es7-autobinder";
+import Loader from "./loader";
+import Troop from "./troop";
 
 class Troops extends React.Component {
   constructor(props) {
