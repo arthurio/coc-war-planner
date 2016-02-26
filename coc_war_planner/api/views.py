@@ -15,22 +15,21 @@ from coc_war_planner.api.serializers import TroopsGetSerializer
 from coc_war_planner.core.models import Clan
 from coc_war_planner.core.models import Member
 from coc_war_planner.core.models import Troops
-from coc_war_planner.core.models import TroopLevel
-
-from django.shortcuts import get_object_or_404
-from django.shortcuts import render
 
 from rest_framework import filters
 from rest_framework import permissions
 from rest_framework import serializers
 from rest_framework import viewsets
 
+
 class ClanViewSet(viewsets.ModelViewSet):
     queryset = Clan.objects.all()
     serializer_class = ClanSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,
-            IsChiefOrReadOnly,
-            IsNotPartOfClanOrCreateNotAllowed)
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        IsChiefOrReadOnly,
+        IsNotPartOfClanOrCreateNotAllowed
+    )
     filter_backends = (filters.OrderingFilter, filters.SearchFilter,)
     ordering_fields = ('name', 'pin',)
     ordering = 'name'  # default ordering
@@ -51,9 +50,11 @@ class ClanViewSet(viewsets.ModelViewSet):
 class MemberViewSet(viewsets.ModelViewSet):
     queryset = Member.objects.all()
     serializer_class = MemberSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,
-            CreateNotAllowed,
-            IsUserOrReadOnly,)
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        CreateNotAllowed,
+        IsUserOrReadOnly,
+    )
 
     def get_serializer_class(self):
         if self.request.method == 'GET':
@@ -63,8 +64,10 @@ class MemberViewSet(viewsets.ModelViewSet):
 
 
 class TroopsViewSet(viewsets.ModelViewSet):
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,
-            IsOwnerOrReadOnly,)
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        IsOwnerOrReadOnly,
+    )
 
     def get_serializer_class(self):
         if self.request.method == 'POST':
@@ -88,4 +91,3 @@ class TroopsViewSet(viewsets.ModelViewSet):
             troops = troops.filter(pk=troops_id)
 
         return troops
-

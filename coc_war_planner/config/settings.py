@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'coc_war_planner.core',
     'coc_war_planner.api',
     'coc_war_planner.www',
+    'coc_war_planner.services',
 
     'django_extensions',
     'django_filters',
@@ -45,6 +46,7 @@ INSTALLED_APPS = (
     'rest_auth',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'rest_auth.registration',
 
     'annoying',
@@ -152,7 +154,7 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_REDIRECT_URL = "/profile"
 
 WEBPACK_LOADER = {
-    'BUNDLE_DIR_NAME': 'js/bundles/', # must end with slash
+    'BUNDLE_DIR_NAME': 'js/bundles/',  # must end with slash
     'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     'POLL_DELAY': 0.2,
     'IGNORE': ['.+\.hot-update.js', '.+\.map']
@@ -161,3 +163,14 @@ WEBPACK_LOADER = {
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
 }
+
+COC_API_BASE_URL = "https://api.clashofclans.com/v1"
+COC_API_TOKEN = (
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9."
+    "eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBmNTVjYzc2LWU3MGMtNDAwZC1i"
+    "Mjk5LWE0YWEyOGRlNGQ4MSIsImlhdCI6MTQ1NjQ1NjU2MCwic3ViIjoiZGV2ZWxvcGVyLzI3MjFjYWQxLTZhZjMtOTE2Yi01"
+    "M2JmLTY0MWVhOGYxYTI5NSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVy"
+    "IiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjU0LjIyNS4xNzAuMTQxIiwiMTA4LjIxMi42Ni4xNTAiXSwidHlw"
+    "ZSI6ImNsaWVudCJ9XX0.zFvcdfhimMs4FkzYfj3egvKgRkmvkSPBuWBSNsAGcmImQvUgXKiTQ7N9BAYR9WYj4UtZX9Ju0qIE"
+    "OWuJr3P83A"
+)

@@ -4,15 +4,26 @@ from coc_war_planner.core.models import Member
 from coc_war_planner.core.models import Troop
 from coc_war_planner.core.models import TroopLevel
 from coc_war_planner.core.models import Troops
+from coc_war_planner.services.clashofclans import Api as ClashOfClansApi
 
 
 class ClanSerializer(serializers.ModelSerializer):
 
     chief = serializers.PrimaryKeyRelatedField(required=True, queryset=Member.objects.filter(clan=None))
+    clashofclans_data = serializers.SerializerMethodField()
 
     class Meta:
         model = Clan
-        fields = ('id', 'chief', 'name', 'pin', 'location', 'level')
+        fields = ('id', 'chief', 'name', 'pin', 'location', 'level', 'clashofclans_data')
+
+    def get_clashofclans_data(self, clan):
+        api = ClashOfClansApi()
+        if clan.pin:
+            try:
+                return api.clan(clan.pin)
+            except api.NotFound:
+                return
+        return
 
     def create(self, validated_data):
         chief = validated_data.get('chief')
@@ -23,6 +34,7 @@ class ClanSerializer(serializers.ModelSerializer):
             })
 
         return super(ClanSerializer, self).create(validated_data)
+
 
 class ClanPutSerializer(serializers.ModelSerializer):
 
@@ -67,14 +79,20 @@ class TroopSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Troop
-        fields = ('name', 'category', 'preferred_target', 'attack_type', 'housing_space', 'training_time', 'barack_level_required', 'range', 'movement_speed', 'attack_speed', 'extra_data')
+        fields = (
+            'name', 'category', 'preferred_target', 'attack_type', 'housing_space', 'training_time',
+            'barack_level_required', 'range', 'movement_speed', 'attack_speed', 'extra_data'
+        )
 
 
 class TroopLevelSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TroopLevel
-        fields = ('level', 'damage_per_second', 'damage_per_attack', 'hitpoints', 'training_cost', 'research_cost', 'laboratory_level_required', 'research_time', 'extra_data')
+        fields = (
+            'level', 'damage_per_second', 'damage_per_attack', 'hitpoints', 'training_cost', 'research_cost',
+            'laboratory_level_required', 'research_time', 'extra_data'
+        )
 
 
 class TroopsPostSerializer(serializers.ModelSerializer):
@@ -120,4 +138,3 @@ class TroopsGetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Troops
         fields = ('id', 'member', 'troop', 'troop_level')
-
