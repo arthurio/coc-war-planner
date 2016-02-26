@@ -9,8 +9,8 @@
 {% block js %}
 <script type="text/javascript">
     $(document).ready(function () {
-        new TroopsDashboard("{% url 'api:troops-list' %}", $("#troops")[0]);
-        new ClanDashboard("{% url 'api:clan-detail' pk=user.member.clan.pk %}", $("#clan")[0]);
+        // new TroopsDashboard("{% url 'api:troops-list' %}", $("#troops")[0]);
+        new DashboardClan($("#clan")[0], "{{ user.member.clan.pk }}");
     });
 </script>
 {% endblock js %}

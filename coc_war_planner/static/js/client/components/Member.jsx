@@ -2,7 +2,7 @@ import React from "react";
 import {autobound} from "es7-autobinder";
 import cookie from "react-cookie";
 import {Typeahead} from "react-typeahead";
-import Loader from "./loader";
+import Loader from "./Loader";
 
 import "babel/polyfill";
 
