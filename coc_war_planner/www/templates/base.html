@@ -14,10 +14,11 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" href="{% static "css/basscss.css" %}" />
+        <link rel="stylesheet" href="{% static "css/basscss.min.css" %}" />
         <link rel="stylesheet" href="{% static "css/global.css" %}" />
         <link rel="stylesheet" href="{% static "css/header.css" %}" />
         <link rel="stylesheet" href="{% static "css/nav.css" %}" />
+        <link rel="stylesheet" href="{% static "css/colors.css" %}" />
         <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
 
         {% block css %}
@@ -27,7 +28,16 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% block header %}
-            {% include 'header.html' %}
+            <header class="white bg-black bg-cover bg-center">
+                {% block header-nav %}
+                    {% include "navigation.html" %}
+                {% endblock header-nav %}
+                {% block header-content %}
+                <div class="center px2 py4">
+                    <h1 class="h1 h0-responsive caps mb4 mt4 regular">Coc War Planner</h1>
+                </div>
+                {% endblock header-content %}
+            </header>
         {% endblock header %}
 
         <div class="content">

@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello les oufs</h1>
+<div class="container">
+  <div class="clearfix">
+    <h1>Plan your wars!</h1>
+  </div>
+  <div class="clearfix">
+    <div class="col col-6">
+      <input type="email" name="email" placeholder="email" />
+    </div>
+    <div class="col col-6">
+      <input type="password" name="password" />
+    </div>
+  </div>
 
-<ul>
-    <li><a href="{% url "registration.login" %}">Login</a></li>
-    <li><a href="{% url "registration.register" %}">Create an account</a></li>
-</ul>
+
 
 {% endblock content %}

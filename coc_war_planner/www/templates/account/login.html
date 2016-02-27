@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block header-content %}
+{% endblock header-content %}
+
+{% block content %}
+<form class="login" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <div class="container sm-col-12 md-col-6">
+    <div class="clearfix center">
+      <h1>Login</h1>
+    </div>
+    {% if form.non_field_errors %}
+      <div class="bg-error white border border-error rounded p2">
+        {% for error in form.non_field_errors %}
+          {{error}}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="clearfix">
+      <div class="col col-12 px2">
+        <div class="col col-12 mb2">
+          <label for="{{ form.login.id_for_label }}">{{ form.login.label }}</label>
+        </div>
+        <div class="col col-12 mb2">
+          <input class="col-12 border rounded{% if form.login.errors %} border-thick border-error{% endif %}" type="email" name="login" id="{{ form.login.id_for_label }}" value="{{ form.login.value|default:'' }}" />
+          {% if form.login.errors %}<p class="error m0">This field is required</p>{% endif %}
+        </div>
+      </div>
+      <div class="col col-12 px2">
+        <div class="col col-12 mb2">
+          <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+        </div>
+        <div class="col col-12 mb2">
+          <input class="col-12 border rounded{% if form.password.errors %} border-thick border-error{% endif %}" type="password" name="{{ form.password.html_name }}" id="{{ form.password.id_for_label }}" value="{{ form.password.value|default:'' }}" />
+          {% if form.password.errors %}<p class="error m0">This field is required</p>{% endif %}
+        </div>
+      </div>
+      <div class="col col-12 px2">
+        <div class="col col-12 mb2">
+          {{ form.remember }}
+          <label for="{{ form.email.id_for_label }}">{{ form.remember.label }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix center mb2">
+      <div class="col col-12">
+        <button class="btn bg-gray border border-gray rounded" type="submit">Submit</button>
+      </div>
+      <div class="col col-12">
+        <a class="mt2 block" href="{% url 'account_reset_password' %}">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock content %}

@@ -9,7 +9,6 @@ urlpatterns = [
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name="logout"),
-    url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
     url(r'^', include('coc_war_planner.www.urls')),
 ]
 

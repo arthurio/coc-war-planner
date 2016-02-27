@@ -12,7 +12,7 @@
         <small>You are logged in as {{ request.user.username }}</small>
         <a class="btn py2" href="{% url 'logout' %}">Logout</a>
         {% else %}
-        <a class="btn py2" href="{% url 'login' %}">Login</a>
+        <a class="btn py2" href="{% url 'account_login' %}">Login</a>
         {% endif %}
     </div>
 </nav>

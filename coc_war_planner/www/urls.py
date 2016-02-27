@@ -4,13 +4,13 @@ from django.contrib.auth.decorators import login_required
 from coc_war_planner.www.views import NonAdminTemplateView
 
 urlpatterns = [
-    url(r'^register/$',
-        NonAdminTemplateView.as_view(template_name='registration/register.html'),
-        name='registration.register'
-        ),
-    url(r'^login/$',
-        NonAdminTemplateView.as_view(template_name='registration/register.html'),
-        name='registration.login'),
+    # url(r'^register/$',
+    #     NonAdminTemplateView.as_view(template_name='registration/register.html'),
+    #     name='registration.register'
+    #     ),
+    # url(r'^login/$',
+    #     NonAdminTemplateView.as_view(template_name='registration/register.html'),
+    #     name='registration.login'),
     url(
         r'^dashboard/$',
         login_required(

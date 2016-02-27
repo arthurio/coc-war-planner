@@ -1,0 +1,16 @@
+.error {
+  color: #D0473F;
+}
+
+.bg-error {
+  background-color: #D0473F;
+}
+
+.border-error {
+  border-color: #CA332A;
+}
+
+
+.border-thick {
+  border-width: 2px;
+}
